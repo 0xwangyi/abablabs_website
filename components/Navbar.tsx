@@ -14,11 +14,20 @@ export default function Navbar() {
 
   return (
     <header className="bg-ababMint border-b border-gray-200/60">
-      <nav className="max-w-6xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl text-gray-900 tracking-tight">
-          <span className="font-bold">ABAB</span>
-          <span className="font-normal text-gray-600"> Labs</span>
+        <Link href="/" className="flex items-center gap-2.5 text-xl text-gray-900 tracking-tight">
+          <img
+            src="/brand/abab-mark.svg"
+            alt="ABAB Labs"
+            width={26}
+            height={26}
+            className="block w-[26px] h-[26px]"
+          />
+          <span>
+            <span className="font-bold">ABAB</span>
+            <span className="font-normal text-gray-600"> Labs</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -85,7 +94,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-ababMint border-t border-gray-200/60">
-          <ul className="px-6 py-4 space-y-3">
+          <ul className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link

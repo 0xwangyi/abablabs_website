@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   },
   description:
     'ABAB Labs builds, invests, and incubates internet-native brands across media, infrastructure, and consumer applications.',
+  icons: {
+    icon: [
+      { url: '/brand/abab-mark-64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/brand/abab-mark-256.png', sizes: '256x256', type: 'image/png' },
+    ],
+    shortcut: '/brand/abab-mark-64.png',
+    apple: { url: '/brand/abab-mark-256.png', sizes: '256x256' },
+  },
   openGraph: {
     title: 'ABAB Labs',
     description:

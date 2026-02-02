@@ -11,12 +11,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-gray-200/60">
-      <div className="max-w-6xl mx-auto px-6 md:px-8 py-10">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-10">
         {/* Top row: description + links */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-6">
           <div className="max-w-md">
             <p className="text-sm text-gray-600 leading-relaxed">
-              Building and operating software products and digital platforms.
+              Software products and digital platforms by ABAB Labs LLC.
             </p>
             <a
               href="mailto:support@abablabs.com"

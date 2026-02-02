@@ -35,16 +35,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[60vh] md:min-h-[65vh] flex items-center bg-ababMint px-6 md:px-8">
+      <section className="min-h-[40vh] md:min-h-[45vh] flex items-center bg-ababMint px-4 md:px-6 py-12 md:py-16">
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center max-w-2xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 tracking-tight">
               ABAB Labs
             </h1>
-            <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed max-w-[60ch] mx-auto">
+            <p className="text-base md:text-lg text-gray-600 mb-5 leading-relaxed max-w-[60ch] mx-auto">
               Building and operating software products and digital platforms.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
               <Button href="/portfolio" variant="primary">
                 Explore Portfolio
               </Button>
