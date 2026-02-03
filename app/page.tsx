@@ -35,33 +35,28 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[40vh] md:min-h-[45vh] flex items-center bg-ababMint px-4 md:px-6 py-12 md:py-16">
+      <section className="flex items-center bg-ababMint px-4 md:px-6 py-14 md:py-20">
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center max-w-2xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
               ABAB Labs
             </h1>
-            <p className="text-base md:text-lg text-gray-600 mb-5 leading-relaxed max-w-[60ch] mx-auto">
+            <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed max-w-[60ch] mx-auto">
               Building and operating software products and digital platforms.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
-              <Button href="/portfolio" variant="primary">
-                Explore Portfolio
-              </Button>
-              <Button href="/contact" variant="ghost">
-                Contact →
-              </Button>
-            </div>
+            <Button href="/portfolio" variant="primary">
+              Explore Portfolio
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Value Proposition */}
       <Section className="bg-white" divider>
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center mb-10">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center mb-6">
           What We Focus On
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {valueProps.map((prop) => (
             <div
               key={prop.title}
@@ -78,15 +73,10 @@ export default function HomePage() {
 
       {/* Portfolio Preview */}
       <Section className="bg-white" divider>
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
-            Portfolio
-          </h2>
-          <Button href="/portfolio" variant="ghost" className="text-sm">
-            View All →
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
+          Portfolio
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -95,7 +85,7 @@ export default function HomePage() {
 
       {/* Principles */}
       <Section className="bg-ababMint" divider>
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center mb-10">
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center mb-6">
           Principles
         </h2>
         <div className="max-w-xl mx-auto">
