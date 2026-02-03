@@ -15,8 +15,8 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-ababMint border-b border-gray-200/60">
-      <nav className="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+    <header className="bg-ababMint border-b border-gray-200/60 px-4 md:px-6">
+      <nav className="max-w-6xl mx-auto h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 text-xl text-gray-900 tracking-tight">
           <img
@@ -95,7 +95,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-ababMint border-t border-gray-200/60">
-          <ul className="px-4 py-4 space-y-3">
+          <ul className="max-w-6xl mx-auto py-4 space-y-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
