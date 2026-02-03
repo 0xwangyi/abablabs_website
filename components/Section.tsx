@@ -18,7 +18,7 @@ export default function Section({
           <div className="border-t border-gray-200/50" />
         </div>
       )}
-      <section id={id} className={`py-12 md:py-16 px-4 md:px-6 ${className}`}>
+      <section id={id} className={`py-10 md:py-12 px-4 md:px-6 ${className}`}>
         <div className="max-w-6xl mx-auto">{children}</div>
       </section>
     </>
