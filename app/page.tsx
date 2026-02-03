@@ -23,10 +23,9 @@ const valueProps = [
 ]
 
 const principles = [
-  'Long-term thinking over short-term gains.',
-  'Open protocols over closed platforms.',
-  'User ownership over platform capture.',
-  'Experiments over certainty.',
+  'Long-term product thinking',
+  'Open and interoperable technologies',
+  'Reliable, user-centric systems',
 ]
 
 export default function HomePage() {
