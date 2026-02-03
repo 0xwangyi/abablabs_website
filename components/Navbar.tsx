@@ -1,15 +1,18 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const navLinks = [
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="bg-ababMint border-b border-gray-200/60">
@@ -30,26 +33,25 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <ul className="flex items-center space-x-6">
-            {navLinks.map((link) => (
+        <ul className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href
+            return (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-ababTeal after:transition-all hover:after:w-full"
+                  className={`text-sm transition-colors relative pb-1 ${
+                    isActive
+                      ? 'text-gray-900 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-ababTeal'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
                 >
                   {link.label}
                 </Link>
               </li>
-            ))}
-          </ul>
-          <Link
-            href="/contact"
-            className="text-sm font-medium text-ababTeal border border-ababTeal/40 px-4 py-1.5 hover:bg-ababTeal hover:text-white transition-all"
-          >
-            Contact
-          </Link>
-        </div>
+            )
+          })}
+        </ul>
 
         {/* Mobile Menu Button */}
         <button
@@ -94,26 +96,22 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-ababMint border-t border-gray-200/60">
           <ul className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link
-                href="/contact"
-                className="inline-block text-sm font-medium text-ababTeal"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact →
-              </Link>
-            </li>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`block text-sm transition-colors ${
+                      isActive ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       )}
