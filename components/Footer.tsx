@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { projects } from '@/lib/portfolio'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -6,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-200/70 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
-        <div className="mb-8 grid gap-8 md:grid-cols-[1.25fr_0.75fr_0.75fr_0.75fr]">
+        <div className="mb-8 grid gap-8 md:grid-cols-[1.15fr_0.8fr_0.85fr_0.8fr]">
           <div>
             <Link href="/" className="mb-4 flex items-center gap-3 text-lg tracking-tight text-gray-950">
               <img
@@ -21,6 +22,9 @@ export default function Footer() {
                 <span className="font-medium text-gray-600"> Labs</span>
               </span>
             </Link>
+            <p className="mb-3 text-sm font-semibold text-gray-950">
+              ABAB Labs LLC
+            </p>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
               California-based software company operating products across information, AI infrastructure, and professional workflows.
             </p>
@@ -49,11 +53,19 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h2 className="mb-3 text-sm font-semibold text-gray-950">Operations</h2>
+            <h2 className="mb-3 text-sm font-semibold text-gray-950">Public Products</h2>
             <div className="grid gap-2">
-              <p className="text-sm text-gray-500">Public platforms</p>
-              <p className="text-sm text-gray-500">Operating products</p>
-              <p className="text-sm text-gray-500">Professional workflows</p>
+              {projects.map((project) => (
+                <a
+                  key={project.id}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 transition-colors hover:text-gray-950"
+                >
+                  {project.name}
+                </a>
+              ))}
             </div>
           </div>
           <div>

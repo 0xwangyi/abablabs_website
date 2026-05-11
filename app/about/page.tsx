@@ -41,7 +41,7 @@ export default function AboutPage() {
               ABAB Labs is a U.S.-based software company focused on building and operating internet-native products with long-term utility.
             </p>
             <p>
-              Our work centers on operating systems for information discovery, structured intelligence, document understanding, media programming, and AI-assisted professional workflows.
+              Our work centers on operating systems for information discovery, structured intelligence, document understanding, relationship workflows, and AI-assisted professional workflows.
             </p>
             <p>
               We operate with a small, focused team and collaborate with contributors globally, prioritizing practical engineering, product clarity, and durable systems.

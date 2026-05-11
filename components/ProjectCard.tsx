@@ -20,6 +20,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <p className="mt-5 text-sm leading-7 text-gray-800">{project.tagline}</p>
       <p className="mt-3 text-sm leading-7 text-gray-500">{project.operatingLine}</p>
+      <dl className="mt-5 grid gap-3 border-t border-gray-100 pt-5 sm:grid-cols-3">
+        {[
+          ['Domain', project.domain],
+          ['Availability', project.availability],
+          ['Product type', project.productType],
+        ].map(([label, value]) => (
+          <div key={label}>
+            <dt className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-400">
+              {label}
+            </dt>
+            <dd className="mt-1 text-sm font-medium leading-6 text-gray-800">{value}</dd>
+          </div>
+        ))}
+      </dl>
       <div className="mt-5 flex flex-wrap gap-2">
         {project.signals.map((signal) => (
           <span

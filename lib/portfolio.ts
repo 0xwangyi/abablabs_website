@@ -5,6 +5,9 @@ export interface Project {
   tagline: string
   operatingLine: string
   status: 'Operating'
+  domain: string
+  availability: string
+  productType: string
   signals: string[]
   ctaLabel: string
   link?: string
@@ -20,6 +23,9 @@ export const projects: Project[] = [
     operatingLine:
       'Updated continuously through editorial and structured information workflows.',
     status: 'Operating',
+    domain: 'ababnews.com',
+    availability: 'Public web platform',
+    productType: 'Information platform',
     signals: ['Public Platform', 'Weekly Updated'],
     link: 'https://www.ababnews.com',
     ctaLabel: 'Visit Platform',
@@ -33,6 +39,9 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured knowledge systems, document intelligence, and workflow reasoning.',
     status: 'Operating',
+    domain: 'ababok.com',
+    availability: 'Public beta web platform',
+    productType: 'AI infrastructure',
     signals: ['Active Product', 'Public Beta'],
     link: 'https://www.ababok.com',
     ctaLabel: 'Visit Platform',
@@ -46,6 +55,9 @@ export const projects: Project[] = [
     operatingLine:
       'Built around relationship memory, follow-up workflows, contact timelines, and personal network visibility.',
     status: 'Operating',
+    domain: 'ababtime.com',
+    availability: 'Public web and app product',
+    productType: 'Relationship intelligence',
     signals: ['Public Platform', 'App Store Product'],
     link: 'https://www.ababtime.com/',
     ctaLabel: 'Visit Platform',
@@ -59,6 +71,9 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured review workflows, vocabulary practice, and knowledge retention.',
     status: 'Operating',
+    domain: 'ababword.com',
+    availability: 'Public web platform',
+    productType: 'Knowledge system',
     signals: ['Active Product', 'Knowledge System'],
     link: 'https://www.ababword.com',
     ctaLabel: 'Visit Platform',
