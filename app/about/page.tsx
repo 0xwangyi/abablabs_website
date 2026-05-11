@@ -15,21 +15,21 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Section className="bg-ababMint">
+      <Section className="bg-gray-950 text-white">
         <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababYellow">
             About
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-950 md:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
             ABAB Labs builds and operates software products.
           </h1>
-          <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The company operates web products and selected mobile tools across information platforms, AI infrastructure, knowledge systems, and professional workflows.
+          <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
+            The company operates web products across information platforms, AI infrastructure, knowledge systems, and professional workflows.
           </p>
         </div>
       </Section>
 
-      <Section className="bg-white">
+      <Section className="bg-[#F3F4F1]">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-950">
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base leading-8 text-gray-700">
             <p>
-              ABAB Labs is a software company focused on building and operating internet-native products with long-term utility across product domains and selected mobile surfaces.
+              ABAB Labs is a software company focused on building and operating internet-native products with long-term utility across focused operating areas.
             </p>
             <p>
               Our work centers on operating systems for information discovery, structured intelligence, document understanding, relationship workflows, and AI-assisted professional workflows.
@@ -50,18 +50,28 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section className="bg-gray-50">
-        <div className="grid gap-5 md:grid-cols-3">
-          {[
-            ['Operator-led', 'Products are shaped by direct product, engineering, and operating ownership.'],
-            ['Public systems', 'The portfolio emphasizes products that can be maintained as public platforms.'],
-            ['Durable utility', 'We care about maintainable infrastructure, structured workflows, and repeat user value.'],
-          ].map(([title, description]) => (
-            <div key={title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-950">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-gray-600">{description}</p>
-            </div>
-          ))}
+      <Section className="border-y border-gray-200/70 bg-[#E8EBED]">
+        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-950">
+              Operating posture
+            </h2>
+          </div>
+          <div className="border-y border-gray-300/70">
+            {[
+              ['Operator-led', 'Products are shaped by direct product, engineering, and operating ownership.'],
+              ['Maintained systems', 'The portfolio emphasizes products that can be maintained and improved over time.'],
+              ['Durable utility', 'We care about maintainable infrastructure, structured workflows, and repeat user value.'],
+            ].map(([title, description]) => (
+              <div
+                key={title}
+                className="grid gap-3 border-b border-gray-300/70 py-5 last:border-b-0 md:grid-cols-[180px_minmax(0,1fr)]"
+              >
+                <h3 className="text-base font-semibold text-gray-950">{title}</h3>
+                <p className="text-sm leading-7 text-gray-600">{description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </>

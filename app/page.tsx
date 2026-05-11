@@ -5,9 +5,9 @@ import { projects } from '@/lib/portfolio'
 
 const operatingSystems = [
   {
-    title: 'Public platforms',
+    title: 'Product surfaces',
     description:
-      'Products designed for continuous public operation and long-term information utility.',
+      'Web products designed for continuous operation and recurring use.',
   },
   {
     title: 'AI infrastructure',
@@ -46,7 +46,7 @@ export default function HomePage() {
               </p>
               <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-300 md:text-lg">
                 <p>
-                  ABAB Labs develops internet-native infrastructure and intelligence products used through public platforms and structured workflows.
+                  ABAB Labs develops internet-native infrastructure and intelligence products used through web products and structured workflows.
                 </p>
                 <p>
                   The company focuses on practical systems, operational reliability, and long-term product durability.
@@ -66,16 +66,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hidden rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/30 backdrop-blur lg:block">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-500">
+            <div className="hidden rounded-lg border border-white/10 bg-white/[0.04] p-5 backdrop-blur lg:block">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-500">
                 Operating snapshot
               </p>
               <div className="mt-5 divide-y divide-white/10">
                 {[
-                  ['Public platforms', 'ABAB News, ABAB Time'],
+                  ['Web products', 'ABAB News, ABAB Time'],
                   ['AI systems', 'ABAB OK'],
                   ['Knowledge systems', 'ABAB Word'],
-                  ['Availability', 'Web products and selected mobile tools'],
                 ].map(([label, value]) => (
                   <div key={label} className="py-4 first:pt-0 last:pb-0">
                     <p className="text-sm font-semibold text-white">{label}</p>
@@ -88,39 +87,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section className="border-b border-gray-200/70 bg-[#F4F6F3]">
-        <div className="mb-8 max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
-            Operating Systems
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-            Products built around continuous operation.
-          </h2>
-          <p className="mt-5 text-base leading-8 text-gray-600">
-            ABAB Labs focuses on products that can compound through continuous operation, structured workflows, and durable user utility.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {operatingSystems.map((area) => (
-            <div key={area.title} className="rounded-lg border border-gray-200/80 bg-white/85 p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-950">{area.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-gray-600">{area.description}</p>
-            </div>
-          ))}
+      <Section className="border-b border-gray-200/70 bg-[#F3F4F1]">
+        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <div className="max-w-xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababTeal">
+              Operating Systems
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
+              Products built around continuous operation.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-gray-600">
+              ABAB Labs focuses on products that can compound through continuous operation, structured workflows, and durable user utility.
+            </p>
+          </div>
+          <div className="border-y border-gray-300/70">
+            {operatingSystems.map((area) => (
+              <div
+                key={area.title}
+                className="grid gap-3 border-b border-gray-300/70 py-5 last:border-b-0 md:grid-cols-[190px_minmax(0,1fr)]"
+              >
+                <h3 className="text-base font-semibold text-gray-950">{area.title}</h3>
+                <p className="text-sm leading-7 text-gray-600">{area.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
-      <Section className="border-y border-gray-200/70 bg-[#ECEFF1]">
+      <Section className="border-y border-gray-200/70 bg-[#E8EBED]">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababTeal">
               Portfolio
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
               Operating products and active systems.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600">
-              The portfolio is focused. Each product is tied to a product domain, an active workflow, and a clearly identified product surface.
+              The portfolio is focused. Each product is tied to an active workflow and a working product surface.
             </p>
           </div>
           <Button href="/portfolio" variant="secondary">
@@ -137,7 +141,7 @@ export default function HomePage() {
       <Section className="bg-gray-950 text-white">
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababYellow">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababYellow">
               Contact
             </p>
             <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
