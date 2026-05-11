@@ -4,7 +4,8 @@ import Button from '@/components/Button'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact ABAB Labs for product partnerships, platform access, and operating product inquiries.',
+  description:
+    'Contact ABAB Labs for platform access, strategic partnerships, research collaboration, and infrastructure discussions.',
 }
 
 export default function ContactPage() {
@@ -16,37 +17,37 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
-            Contact ABAB Labs.
+            Connect with ABAB Labs.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            For product partnerships, platform access, operating product inquiries, or company discussions, contact the ABAB Labs team directly.
+            A direct channel for platform access, strategic partnerships, research collaboration, and infrastructure discussions across intelligence systems.
           </p>
         </div>
       </Section>
 
       <Section className="bg-surfaceMuted">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-lg border border-gray-200 bg-white p-6">
-            <h2 className="text-xl font-bold tracking-tight text-gray-950">Email</h2>
+          <div className="rounded-lg border border-gray-200 bg-white p-6 md:p-7">
+            <h2 className="text-xl font-semibold tracking-tight text-gray-950">Direct channel</h2>
             <p className="mt-3 text-sm leading-7 text-gray-600">
-              Include who you are, the product or workflow you want to discuss, and the best next step.
+              For considered inquiries related to ABAB Labs platforms, systems, and long-term partnerships.
             </p>
             <div className="mt-6">
               <Button href="mailto:support@abablabs.com" variant="primary">
-                support@abablabs.com
+                Contact team
               </Button>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ['Product partnerships', 'Distribution, integrations, and product collaboration around active platforms.'],
-              ['Platform access', 'Use cases, access requests, and product-specific operating questions.'],
-              ['Company discussions', 'Company overview, portfolio direction, and operating product context.'],
-              ['Contributors', 'Engineering, product, research, and operations collaboration.'],
+              ['Platform access', 'Requests for access to ABAB Labs products, systems, and intelligence platforms.'],
+              ['Strategic partnerships', 'Long-term partnerships across information systems, AI infrastructure, and knowledge networks.'],
+              ['Research collaboration', 'Applied research across structured intelligence, cognition, networks, and AI systems.'],
+              ['Infrastructure discussions', 'Conversations with teams and institutions building durable operating systems.'],
             ].map(([title, description]) => (
-              <div key={title} className="rounded-lg border border-gray-200 bg-white p-5">
-                <h3 className="text-base font-semibold text-gray-950">{title}</h3>
+              <div key={title} className="rounded-lg border border-gray-200 bg-white p-5 md:p-6">
+                <h3 className="text-base font-semibold tracking-tight text-gray-950">{title}</h3>
                 <p className="mt-2 text-sm leading-7 text-gray-600">{description}</p>
               </div>
             ))}

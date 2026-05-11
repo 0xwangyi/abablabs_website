@@ -127,7 +127,7 @@ export default function Navbar() {
             href="/contact"
             className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
           >
-            Contact team
+            Get in touch
           </Link>
         </div>
 
@@ -209,7 +209,7 @@ export default function Navbar() {
               className="block rounded-md bg-gray-950 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-800"
               onClick={closeMenu}
             >
-              Contact team
+              Get in touch
             </Link>
           </div>
         </div>

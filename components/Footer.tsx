@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              Software company operating products across information, AI infrastructure, and professional workflows.
+              Intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.
             </p>
             <a
               href="mailto:support@abablabs.com"
