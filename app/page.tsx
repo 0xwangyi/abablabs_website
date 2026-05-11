@@ -7,7 +7,7 @@ const operatingSystems = [
   {
     title: 'Product surfaces',
     description:
-      'Web products designed for continuous operation and recurring use.',
+      'Software products designed for continuous operation and recurring use.',
   },
   {
     title: 'AI infrastructure',
@@ -58,7 +58,7 @@ export default function HomePage() {
               </p>
               <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-300 md:text-lg">
                 <p>
-                  ABAB Labs develops internet-native infrastructure and intelligence products used through web products and structured workflows.
+                  ABAB Labs develops internet-native infrastructure and intelligence products used through software products and structured workflows.
                 </p>
                 <p>
                   The company focuses on practical systems, operational reliability, and long-term product durability.
@@ -83,7 +83,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-4 divide-y divide-white/10">
                   {[
-                    ['Web products', 'ABAB News, ABAB Time'],
+                    ['Software products', 'ABAB News, ABAB Time'],
                     ['AI systems', 'ABAB OK'],
                     ['Knowledge systems', 'ABAB Word'],
                   ].map(([label, value]) => (
@@ -102,7 +102,7 @@ export default function HomePage() {
               </p>
               <div className="mt-5 divide-y divide-white/10">
                 {[
-                  ['Web products', 'ABAB News, ABAB Time'],
+                  ['Software products', 'ABAB News, ABAB Time'],
                   ['AI systems', 'ABAB OK'],
                   ['Knowledge systems', 'ABAB Word'],
                 ].map(([label, value]) => (

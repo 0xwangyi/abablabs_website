@@ -24,7 +24,7 @@ export default function AboutPage() {
             ABAB Labs builds and operates software products.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            The company operates web products across information platforms, AI infrastructure, knowledge systems, and professional workflows.
+            The company operates software products across information platforms, AI infrastructure, knowledge systems, and professional workflows.
           </p>
         </div>
       </Section>
