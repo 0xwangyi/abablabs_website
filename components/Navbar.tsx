@@ -55,7 +55,7 @@ export default function Navbar() {
             href="/contact"
             className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
           >
-            Start a conversation
+            Contact team
           </Link>
         </div>
 
