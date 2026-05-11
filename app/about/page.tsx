@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <Section className="bg-ababMint">
         <div className="max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">
             About
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-950 md:text-6xl">

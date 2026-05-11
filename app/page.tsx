@@ -18,7 +18,7 @@ const trustSignals = [
   },
   {
     value: 'U.S.',
-    label: 'California / United States',
+    label: 'California, U.S.',
   },
 ]
 
@@ -69,40 +69,52 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-gray-200/70 bg-ababMint px-4 py-16 md:px-6 md:py-24">
-        <img
-          src="/brand/abab-mark-512.png"
-          alt=""
-          aria-hidden="true"
-          width={512}
-          height={512}
-          className="pointer-events-none absolute top-24 hidden h-[360px] w-[360px] opacity-[0.13] lg:right-[7%] lg:block xl:right-[10%]"
-        />
         <div className="relative z-10 mx-auto max-w-6xl">
-          <div className="max-w-4xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">
-              U.S.-based product studio and operating company
-            </p>
-            <h1 className="mt-5 text-5xl font-bold tracking-tight text-gray-950 md:text-7xl">
-              ABAB Labs
-            </h1>
-            <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-gray-950 md:text-4xl">
-              Building and operating durable software platforms for information, AI, and professional workflows.
-            </p>
-            <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-600 md:text-lg">
-              <p>
-                ABAB Labs develops and operates a focused portfolio of internet-native infrastructure and intelligence products.
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
+            <div className="max-w-4xl">
+              <p className="text-sm font-semibold text-gray-500">
+                U.S.-based software company
               </p>
-              <p>
-                The company emphasizes operational systems, structured workflows, and long-term product durability.
+              <h1 className="mt-5 text-5xl font-bold tracking-tight text-gray-950 md:text-7xl">
+                ABAB Labs
+              </h1>
+              <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-gray-950 md:text-4xl">
+                Operating software platforms for information, AI, and professional workflows.
               </p>
+              <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-600 md:text-lg">
+                <p>
+                  ABAB Labs develops internet-native infrastructure and intelligence products used through public platforms and structured workflows.
+                </p>
+                <p>
+                  The company focuses on practical systems, operational reliability, and long-term product durability.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button href="/portfolio" variant="primary">
+                  Explore portfolio
+                </Button>
+                <Button href="/contact" variant="secondary">
+                  Contact ABAB Labs
+                </Button>
+              </div>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/portfolio" variant="primary">
-                Explore portfolio
-              </Button>
-              <Button href="/contact" variant="secondary">
-                Contact ABAB Labs
-              </Button>
+
+            <div className="hidden rounded-lg border border-gray-200 bg-white/80 p-5 shadow-sm backdrop-blur lg:block">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-400">
+                Operating snapshot
+              </p>
+              <div className="mt-5 divide-y divide-gray-100">
+                {[
+                  ['Public platforms', 'ABAB News, ABAB Time'],
+                  ['AI systems', 'ABAB OK'],
+                  ['Development', 'ABAB Word'],
+                ].map(([label, value]) => (
+                  <div key={label} className="py-4 first:pt-0 last:pb-0">
+                    <p className="text-sm font-semibold text-gray-950">{label}</p>
+                    <p className="mt-1 text-sm leading-6 text-gray-500">{value}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -123,7 +135,7 @@ export default function HomePage() {
       <Section className="bg-white">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ababTeal">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
               Operating Systems
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
@@ -147,7 +159,7 @@ export default function HomePage() {
       <Section className="border-y border-gray-200/70 bg-gray-50">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ababTeal">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
               Portfolio
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
@@ -171,7 +183,7 @@ export default function HomePage() {
       <Section className="bg-gray-950 text-white">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ababYellow">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababYellow">
               Operating principles
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
@@ -200,12 +212,15 @@ export default function HomePage() {
       <Section className="bg-ababMint">
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">
-              Investors, partners, and customers
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">
+              Contact
             </p>
-            <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Contact ABAB Labs about product partnerships, platform access, or professional workflow use cases.
+            <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
+              Contact ABAB Labs for partnerships and platform access.
             </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600">
+              For customer, partner, or company inquiries, reach the team directly.
+            </p>
           </div>
           <Button href="/contact" variant="primary">
             Contact ABAB Labs
