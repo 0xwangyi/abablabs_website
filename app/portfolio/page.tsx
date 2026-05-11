@@ -6,7 +6,7 @@ import ProjectCard from '@/components/ProjectCard'
 import Button from '@/components/Button'
 import { projects } from '@/lib/portfolio'
 
-type FilterStatus = 'All' | 'Operating' | 'In Development'
+type FilterStatus = 'All' | 'Operating'
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState<FilterStatus>('All')
@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       ? projects
       : projects.filter((p) => p.status === filter)
 
-  const filters: FilterStatus[] = ['All', 'Operating', 'In Development']
+  const filters: FilterStatus[] = ['All', 'Operating']
 
   return (
     <>
