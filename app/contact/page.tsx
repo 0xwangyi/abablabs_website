@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Section from '@/components/Section'
 import Button from '@/components/Button'
+import { contactEmail, contactEmailHref } from '@/lib/contact'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -33,8 +34,12 @@ export default function ContactPage() {
               For considered inquiries related to ABAB Labs platforms, systems, and long-term partnerships.
             </p>
             <div className="mt-6">
-              <Button href="mailto:support@abablabs.com" variant="primary">
-                support@abablabs.com
+              <Button
+                href={contactEmailHref}
+                ariaLabel={`Email ABAB Labs at ${contactEmail}`}
+                variant="primary"
+              >
+                {contactEmail}
               </Button>
             </div>
           </div>
