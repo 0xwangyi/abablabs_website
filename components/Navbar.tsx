@@ -124,7 +124,7 @@ export default function Navbar() {
             })}
           </ul>
           <Link
-            href="/contact"
+            href="/contact#contact-channel"
             className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
           >
             Get in touch
@@ -205,7 +205,7 @@ export default function Navbar() {
           </ul>
           <div className="mx-auto max-w-6xl border-t border-gray-100 px-2 pb-4 pt-2">
             <Link
-              href="/contact"
+              href="/contact#contact-channel"
               className="block rounded-md bg-gray-950 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-800"
               onClick={closeMenu}
             >

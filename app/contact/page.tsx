@@ -25,7 +25,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section className="bg-surfaceMuted">
+      <Section id="contact-channel" className="scroll-mt-16 bg-surfaceMuted">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-lg border border-gray-200 bg-white p-6 md:p-7">
             <h2 className="text-xl font-semibold tracking-tight text-gray-950">Direct channel</h2>
@@ -34,7 +34,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-6">
               <Button href="mailto:support@abablabs.com" variant="primary">
-                Contact team
+                support@abablabs.com
               </Button>
             </div>
           </div>
