@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const navLinks = [
   { href: '/portfolio', label: 'Portfolio' },
@@ -12,34 +12,14 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
-  const isHome = pathname === '/'
-  const useDarkHeader = isHome && !scrolled
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 16)
-
-    handleScroll()
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
-    <header
-      className={`sticky top-0 z-50 px-4 backdrop-blur md:px-6 ${
-        useDarkHeader
-          ? 'border-b border-white/10 bg-gray-950/95'
-          : 'border-b border-gray-200/70 bg-white/90'
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/95 px-4 backdrop-blur md:px-6">
       <nav className="max-w-6xl mx-auto h-16 flex items-center justify-between">
         <Link
           href="/"
-          className={`flex items-center gap-3 text-xl tracking-tight ${
-            useDarkHeader ? 'text-white' : 'text-gray-950'
-          }`}
+          className="flex items-center gap-3 text-xl tracking-tight text-gray-950"
         >
           <img
             src="/brand/abab-mark.svg"
@@ -50,7 +30,7 @@ export default function Navbar() {
           />
           <span>
             <span className="font-bold">ABAB</span>
-            <span className={`font-medium ${useDarkHeader ? 'text-gray-300' : 'text-gray-600'}`}> Labs</span>
+            <span className="font-medium text-gray-600"> Labs</span>
           </span>
         </Link>
 
@@ -64,10 +44,8 @@ export default function Navbar() {
                     href={link.href}
                     className={`relative pb-1 text-sm font-medium transition-colors ${
                       isActive
-                        ? `${useDarkHeader ? 'text-white' : 'text-gray-950'} after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-ababTeal`
-                        : useDarkHeader
-                          ? 'text-gray-300 hover:text-white'
-                          : 'text-gray-600 hover:text-gray-950'
+                        ? 'text-gray-950 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-ababTeal'
+                        : 'text-gray-600 hover:text-gray-950'
                     }`}
                   >
                     {link.label}
@@ -78,11 +56,7 @@ export default function Navbar() {
           </ul>
           <Link
             href="/contact"
-            className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
-              useDarkHeader
-                ? 'border border-white/15 bg-white text-gray-950 hover:bg-gray-100'
-                : 'bg-gray-950 text-white hover:bg-gray-800'
-            }`}
+            className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
           >
             Contact team
           </Link>
@@ -90,9 +64,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`rounded-md p-2 md:hidden ${
-            useDarkHeader ? 'text-gray-200 hover:bg-white/10' : 'text-gray-700 hover:bg-gray-100'
-          }`}
+          className="rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -129,7 +101,7 @@ export default function Navbar() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className={`border-t md:hidden ${useDarkHeader ? 'border-white/10 bg-gray-950' : 'border-gray-200/70 bg-white'}`}>
+        <div className="border-t border-gray-200/70 bg-white md:hidden">
           <ul className="mx-auto max-w-6xl space-y-3 py-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
@@ -139,12 +111,8 @@ export default function Navbar() {
                     href={link.href}
                     className={`block rounded-md px-2 py-2 text-sm transition-colors ${
                       isActive
-                        ? useDarkHeader
-                          ? 'bg-white/10 font-semibold text-white'
-                          : 'bg-gray-50 font-semibold text-gray-950'
-                        : useDarkHeader
-                          ? 'text-gray-300 hover:text-white'
-                          : 'text-gray-600 hover:text-gray-950'
+                        ? 'bg-gray-50 font-semibold text-gray-950'
+                        : 'text-gray-600 hover:text-gray-950'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
