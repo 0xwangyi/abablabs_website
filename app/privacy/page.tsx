@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Section from '@/components/Section'
+import { contactEmail, contactEmailHref } from '@/lib/contact'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -101,8 +102,11 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-gray-900 mb-3">10. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy or our data practices, please contact us at{' '}
-              <a href="mailto:support@abablabs.com" className="text-ababTeal hover:underline">
-                support@abablabs.com
+              <a
+                href={contactEmailHref}
+                className="text-ababTeal hover:underline"
+              >
+                {contactEmail}
               </a>.
             </p>
           </div>

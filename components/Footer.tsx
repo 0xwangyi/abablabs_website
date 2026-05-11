@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { projects } from '@/lib/portfolio'
+import { contactEmail, contactEmailHref } from '@/lib/contact'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -26,10 +27,11 @@ export default function Footer() {
               Intelligence infrastructure for structured knowledge, memory systems, and machine-assisted reasoning.
             </p>
             <a
-              href="mailto:support@abablabs.com"
+              href={contactEmailHref}
+              aria-label={`Email ABAB Labs at ${contactEmail}`}
               className="mt-3 inline-block text-sm font-semibold text-gray-950 hover:text-ababTeal"
             >
-              support@abablabs.com
+              {contactEmail}
             </a>
           </div>
           <div>

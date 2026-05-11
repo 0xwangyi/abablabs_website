@@ -9,6 +9,9 @@ interface ButtonProps {
   type?: 'button' | 'submit'
   onClick?: () => void
   className?: string
+  target?: string
+  rel?: string
+  ariaLabel?: string
 }
 
 export default function Button({
@@ -18,6 +21,9 @@ export default function Button({
   type = 'button',
   onClick,
   className = '',
+  target,
+  rel,
+  ariaLabel,
 }: ButtonProps) {
   const baseStyles =
     'inline-flex items-center justify-center text-sm font-semibold transition-all duration-200 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ababTeal'
@@ -37,14 +43,20 @@ export default function Button({
 
     if (isNativeLink) {
       return (
-        <a href={href} className={combinedStyles}>
+        <a
+          href={href}
+          target={target}
+          rel={rel}
+          aria-label={ariaLabel}
+          className={combinedStyles}
+        >
           {children}
         </a>
       )
     }
 
     return (
-      <Link href={href} className={combinedStyles}>
+      <Link href={href} target={target} rel={rel} aria-label={ariaLabel} className={combinedStyles}>
         {children}
       </Link>
     )
