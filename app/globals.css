@@ -10,3 +10,8 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+::selection {
+  background: #b7f1ec;
+  color: #111827;
+}

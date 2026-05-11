@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Section from '@/components/Section'
+import Button from '@/components/Button'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -8,25 +9,50 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Section className="bg-ababMint">
-      <div className="max-w-2xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Contact
-        </h1>
-        <p className="text-gray-600 mb-8">
-          For inquiries, please contact us via email.
-        </p>
-
-        <div className="p-6 bg-white border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Email</h2>
-          <a
-            href="mailto:support@abablabs.com"
-            className="text-ababTeal hover:underline"
-          >
-            support@abablabs.com
-          </a>
+    <>
+      <Section className="bg-ababMint">
+        <div className="max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">
+            Contact
+          </p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-950 md:text-6xl">
+            Start a conversation with ABAB Labs.
+          </h1>
+          <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
+            For product partnerships, customer inquiries, distribution opportunities, or investor conversations, contact the ABAB Labs team directly.
+          </p>
         </div>
-      </div>
-    </Section>
+      </Section>
+
+      <Section className="bg-white">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold tracking-tight text-gray-950">Email</h2>
+            <p className="mt-3 text-sm leading-7 text-gray-600">
+              Include who you are, the product or opportunity you want to discuss, and the best next step.
+            </p>
+            <div className="mt-6">
+              <Button href="mailto:support@abablabs.com" variant="primary">
+                support@abablabs.com
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              ['Partnerships', 'Strategic distribution, integrations, and product collaboration.'],
+              ['Customers', 'Use cases, access requests, and product-specific questions.'],
+              ['Investors', 'Company overview, portfolio direction, and strategic financing conversations.'],
+              ['Contributors', 'Engineering, product, research, and operating collaboration.'],
+            ].map(([title, description]) => (
+              <div key={title} className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+                <h3 className="text-base font-semibold text-gray-950">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-gray-600">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+    </>
   )
 }
