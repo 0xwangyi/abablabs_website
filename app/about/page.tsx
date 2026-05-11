@@ -4,11 +4,11 @@ import Section from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'ABAB Labs builds and operates products across information, AI, and infrastructure.',
+    'ABAB Labs builds intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.',
   openGraph: {
     title: 'About | ABAB Labs',
     description:
-      'ABAB Labs builds and operates products across information, AI, and infrastructure.',
+      'ABAB Labs builds intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.',
   },
 }
 
@@ -21,10 +21,10 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
-            ABAB Labs builds and operates software products.
+            ABAB Labs builds intelligence systems for structured knowledge.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            The company operates software products across information platforms, AI infrastructure, knowledge systems, and professional workflows.
+            Information infrastructure for signal discovery, memory, and machine-assisted reasoning.
           </p>
         </div>
       </Section>
@@ -33,18 +33,18 @@ export default function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-950">
-              Company profile
+              Systems orientation
             </h2>
           </div>
-          <div className="space-y-6 text-base leading-8 text-gray-700">
+          <div className="space-y-5 text-[15px] leading-8 text-gray-700">
             <p>
-              ABAB Labs is a software company focused on building and operating internet-native products with long-term utility across focused operating areas.
+              ABAB Labs works on long-horizon information infrastructure: systems that collect, structure, retain, and reason over knowledge.
             </p>
             <p>
-              Our work centers on operating systems for information discovery, structured intelligence, document understanding, relationship workflows, and AI-assisted professional workflows.
+              The work spans public information networks, structured AI systems, relationship memory, and cognitive learning systems.
             </p>
             <p>
-              We operate with a small, focused team and collaborate with contributors globally, prioritizing practical engineering, product clarity, and durable systems.
+              The company favors durable architecture, clear operating boundaries, and systems that improve through sustained operation.
             </p>
           </div>
         </div>
@@ -54,20 +54,20 @@ export default function AboutPage() {
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-950">
-              Operating posture
+              Operating principles
             </h2>
           </div>
           <div className="border-y border-gray-300/70">
             {[
-              ['Operator-led', 'Products are shaped by direct product, engineering, and operating ownership.'],
-              ['Maintained systems', 'The portfolio emphasizes products that can be maintained and improved over time.'],
-              ['Durable utility', 'We care about maintainable infrastructure, structured workflows, and repeat user value.'],
+              ['Long-horizon operation', 'Build systems that can be operated, maintained, and improved over years.'],
+              ['Structured knowledge', 'Organize information into durable memory, context, and reasoning surfaces.'],
+              ['Signal discipline', 'Prioritize clear boundaries, high-quality inputs, and compounding operational intelligence.'],
             ].map(([title, description]) => (
               <div
                 key={title}
                 className="grid gap-3 border-b border-gray-300/70 py-5 last:border-b-0 md:grid-cols-[180px_minmax(0,1fr)]"
               >
-                <h3 className="text-base font-semibold text-gray-950">{title}</h3>
+                <h3 className="text-base font-semibold tracking-tight text-gray-950">{title}</h3>
                 <p className="text-sm leading-7 text-gray-600">{description}</p>
               </div>
             ))}
