@@ -15,7 +15,7 @@ export default function PortfolioPage() {
             Operating products across information, AI, and professional workflows.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            ABAB Labs maintains a focused portfolio of web-based products and workflow systems.
+            ABAB Labs maintains a focused portfolio of software products and workflow systems.
           </p>
         </div>
       </Section>
@@ -27,7 +27,7 @@ export default function PortfolioPage() {
               Operating products
             </h2>
             <p className="mt-2 text-sm text-gray-500">
-              Current product surfaces across web products and workflow systems.
+              Current product surfaces across software products and workflow systems.
             </p>
           </div>
         </div>

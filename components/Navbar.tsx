@@ -31,7 +31,7 @@ export default function Navbar() {
 
     const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    const main = document.getElementById('main-content')
+    const main = document.querySelector('main')
     const footer = document.querySelector('footer')
     main?.setAttribute('inert', '')
     footer?.setAttribute('inert', '')

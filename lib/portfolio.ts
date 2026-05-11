@@ -21,7 +21,7 @@ export const projects: Project[] = [
     operatingLine:
       'Updated continuously through editorial and structured information workflows.',
     status: 'Operating',
-    availability: 'Web platform',
+    availability: 'Software platform',
     productType: 'Information',
     link: 'https://www.ababnews.com',
     ctaLabel: 'Visit product',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured knowledge systems, document intelligence, and workflow reasoning.',
     status: 'Operating',
-    availability: 'Web platform',
+    availability: 'Software platform',
     productType: 'AI infrastructure',
     link: 'https://www.ababok.com',
     ctaLabel: 'Visit product',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     operatingLine:
       'Built around relationship memory, follow-up workflows, contact timelines, and personal network visibility.',
     status: 'Operating',
-    availability: 'Web platform',
+    availability: 'Software platform',
     productType: 'Relationship intelligence',
     link: 'https://www.ababtime.com/',
     ctaLabel: 'Visit product',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured review workflows, vocabulary practice, and knowledge retention.',
     status: 'Operating',
-    availability: 'Web platform',
+    availability: 'Software platform',
     productType: 'Knowledge system',
     link: 'https://www.ababword.com',
     ctaLabel: 'Visit product',

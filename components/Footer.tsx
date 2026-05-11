@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              Software company operating web products across information, AI infrastructure, and professional workflows.
+              Software company operating products across information, AI infrastructure, and professional workflows.
             </p>
             <a
               href="mailto:support@abablabs.com"
@@ -83,9 +83,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-100 pt-5">
-          <div className="flex flex-col gap-2 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="text-xs text-gray-400">
             <p>© {currentYear} ABAB Labs. All rights reserved.</p>
-            <p>Operating software products</p>
           </div>
         </div>
       </div>

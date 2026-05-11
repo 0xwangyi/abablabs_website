@@ -50,15 +50,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="flex min-h-screen flex-col bg-surfacePage font-sans text-gray-950 antialiased">
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
         <Navbar />
-        <main
-          id="main-content"
-          className="flex-1 outline-none focus-visible:ring-2 focus-visible:ring-ababTeal focus-visible:ring-offset-2 focus-visible:ring-offset-surfacePage"
-          tabIndex={-1}
-        >
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
