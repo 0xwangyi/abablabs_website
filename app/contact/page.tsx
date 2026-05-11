@@ -24,7 +24,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section className="bg-[#F3F4F1]">
+      <Section className="bg-surfaceMuted">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-lg border border-gray-200 bg-white p-6">
             <h2 className="text-xl font-bold tracking-tight text-gray-950">Email</h2>

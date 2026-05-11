@@ -5,9 +5,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-gray-200/70 bg-white">
+    <footer className="border-t border-gray-200/70 bg-surfacePage">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
-        <div className="mb-8 grid gap-8 md:grid-cols-[1.15fr_0.8fr_0.85fr_0.8fr]">
+        <div className="mb-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.8fr_0.85fr_0.8fr]">
           <div>
             <Link href="/" className="mb-4 flex items-center gap-3 text-lg tracking-tight text-gray-950">
               <img
@@ -55,7 +55,8 @@ export default function Footer() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 transition-colors hover:text-gray-950"
+                  aria-label={`${project.name} (opens in new tab)`}
+                  className="text-sm text-gray-500 transition-colors hover:text-ababRed motion-reduce:hover:text-gray-950"
                 >
                   {project.name}
                 </a>

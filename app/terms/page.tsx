@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <Section className="bg-white">
+    <Section className="bg-surfacePage">
       <div className="max-w-3xl">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
           Terms of Service

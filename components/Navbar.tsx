@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const navLinks = [
   { href: '/portfolio', label: 'Portfolio' },
@@ -10,13 +10,82 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
+const MOBILE_MENU_ID = 'primary-mobile-nav'
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const menuPanelRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+
+  const closeMenu = useCallback(() => {
+    setMobileMenuOpen(false)
+  }, [])
+
+  useEffect(() => {
+    closeMenu()
+  }, [pathname, closeMenu])
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const main = document.getElementById('main-content')
+    const footer = document.querySelector('footer')
+    main?.setAttribute('inert', '')
+    footer?.setAttribute('inert', '')
+
+    return () => {
+      document.body.style.overflow = prevOverflow
+      main?.removeAttribute('inert')
+      footer?.removeAttribute('inert')
+    }
+  }, [mobileMenuOpen])
+
+  useEffect(() => {
+    if (!mobileMenuOpen || !menuPanelRef.current) return
+
+    const panel = menuPanelRef.current
+    const focusable = panel.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])',
+    )
+    const list = Array.from(focusable)
+    if (list.length > 0) {
+      list[0].focus()
+    }
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        closeMenu()
+        menuButtonRef.current?.focus()
+        return
+      }
+      if (e.key !== 'Tab' || list.length === 0) return
+
+      const first = list[0]
+      const last = list[list.length - 1]
+      const active = document.activeElement
+
+      if (e.shiftKey) {
+        if (active === first) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else if (active === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    panel.addEventListener('keydown', onKeyDown)
+    return () => panel.removeEventListener('keydown', onKeyDown)
+  }, [mobileMenuOpen, closeMenu])
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/95 px-4 backdrop-blur md:px-6">
-      <nav className="max-w-6xl mx-auto h-16 flex items-center justify-between">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between" aria-label="Primary">
         <Link
           href="/"
           className="flex items-center gap-3 text-xl tracking-tight text-gray-950"
@@ -63,10 +132,13 @@ export default function Navbar() {
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
           className="rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          onClick={() => setMobileMenuOpen((o) => !o)}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls={MOBILE_MENU_ID}
         >
           {mobileMenuOpen ? (
             <svg
@@ -74,6 +146,7 @@ export default function Navbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -88,6 +161,7 @@ export default function Navbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -101,8 +175,15 @@ export default function Navbar() {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="border-t border-gray-200/70 bg-white md:hidden">
-          <ul className="mx-auto max-w-6xl space-y-3 py-4">
+        <div
+          ref={menuPanelRef}
+          id={MOBILE_MENU_ID}
+          className="border-t border-gray-200/70 bg-white md:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+        >
+          <ul className="mx-auto max-w-6xl space-y-1 py-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
@@ -114,7 +195,7 @@ export default function Navbar() {
                         ? 'bg-gray-50 font-semibold text-gray-950'
                         : 'text-gray-600 hover:text-gray-950'
                     }`}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={closeMenu}
                   >
                     {link.label}
                   </Link>
@@ -122,6 +203,15 @@ export default function Navbar() {
               )
             })}
           </ul>
+          <div className="mx-auto max-w-6xl border-t border-gray-100 px-2 pb-4 pt-2">
+            <Link
+              href="/contact"
+              className="block rounded-md bg-gray-950 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-800"
+              onClick={closeMenu}
+            >
+              Contact team
+            </Link>
+          </div>
         </div>
       )}
     </header>
