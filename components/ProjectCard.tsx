@@ -18,9 +18,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.status}
         </span>
       </div>
-      <p className="mt-5 text-sm leading-7 text-gray-800">{project.tagline}</p>
-      <p className="mt-3 text-sm leading-7 text-gray-500">{project.operatingLine}</p>
-      <dl className="mt-5 grid gap-3 border-t border-gray-100 pt-5 sm:grid-cols-3">
+      <div className="mt-5 space-y-3 md:min-h-[132px]">
+        <p className="text-sm leading-7 text-gray-800">{project.tagline}</p>
+        <p className="text-sm leading-7 text-gray-500">{project.operatingLine}</p>
+      </div>
+      <dl className="grid gap-3 border-t border-gray-100 pt-5 sm:grid-cols-3">
         {[
           ['Domain', project.domain],
           ['Availability', project.availability],
@@ -46,8 +48,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="mt-5 border-t border-gray-100 pt-5">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-400">
-          Public record
+        <p className="text-xs font-semibold text-gray-500">
+          Available on
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {project.publicRecords.map((record) =>

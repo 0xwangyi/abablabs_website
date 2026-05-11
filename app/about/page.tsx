@@ -4,11 +4,11 @@ import Section from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'ABAB Labs is a U.S.-based software company building and operating products across information, AI, and infrastructure.',
+    'ABAB Labs builds and operates products across information, AI, and infrastructure.',
   openGraph: {
     title: 'About | ABAB Labs',
     description:
-      'ABAB Labs is a U.S.-based software company building and operating products across information, AI, and infrastructure.',
+      'ABAB Labs builds and operates products across information, AI, and infrastructure.',
   },
 }
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
             ABAB Labs builds and operates software products.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The company operates public web products and iOS apps across information platforms, AI infrastructure, knowledge systems, and professional workflows.
+            The company operates web products and selected mobile tools across information platforms, AI infrastructure, knowledge systems, and professional workflows.
           </p>
         </div>
       </Section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base leading-8 text-gray-700">
             <p>
-              ABAB Labs is a U.S.-based software company focused on building and operating internet-native products with long-term utility across public domains and iOS distribution.
+              ABAB Labs is a software company focused on building and operating internet-native products with long-term utility across product domains and selected mobile surfaces.
             </p>
             <p>
               Our work centers on operating systems for information discovery, structured intelligence, document understanding, relationship workflows, and AI-assisted professional workflows.
