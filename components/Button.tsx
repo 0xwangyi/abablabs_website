@@ -33,6 +33,16 @@ export default function Button({
   const combinedStyles = `${baseStyles} ${variants[variant]} ${className}`
 
   if (href) {
+    const isNativeLink = /^(mailto:|tel:|https?:)/.test(href)
+
+    if (isNativeLink) {
+      return (
+        <a href={href} className={combinedStyles}>
+          {children}
+        </a>
+      )
+    }
+
     return (
       <Link href={href} className={combinedStyles}>
         {children}
