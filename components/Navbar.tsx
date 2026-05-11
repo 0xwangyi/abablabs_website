@@ -15,54 +15,59 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-ababMint border-b border-gray-200/60 px-4 md:px-6">
+    <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/90 px-4 backdrop-blur md:px-6">
       <nav className="max-w-6xl mx-auto h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 text-xl text-gray-900 tracking-tight">
+        <Link href="/" className="flex items-center gap-3 text-xl text-gray-950 tracking-tight">
           <img
             src="/brand/abab-mark.svg"
             alt="ABAB Labs"
-            width={26}
-            height={26}
-            className="block w-[26px] h-[26px]"
+            width={30}
+            height={30}
+            className="block h-[30px] w-[30px]"
           />
           <span>
             <span className="font-bold">ABAB</span>
-            <span className="font-normal text-gray-600"> Labs</span>
+            <span className="font-medium text-gray-600"> Labs</span>
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href
-            return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`text-sm transition-colors relative pb-1 ${
-                    isActive
-                      ? 'text-gray-900 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-ababTeal'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+        <div className="hidden items-center gap-7 md:flex">
+          <ul className="flex items-center gap-6">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`relative pb-1 text-sm font-medium transition-colors ${
+                      isActive
+                        ? 'text-gray-950 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-ababTeal'
+                        : 'text-gray-600 hover:text-gray-950'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+          <Link
+            href="/contact"
+            className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
+          >
+            Start a conversation
+          </Link>
+        </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
-          className="md:hidden p-2 text-gray-700"
+          className="rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -76,7 +81,7 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -92,18 +97,17 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-ababMint border-t border-gray-200/60">
-          <ul className="max-w-6xl mx-auto py-4 space-y-3">
+        <div className="border-t border-gray-200/70 bg-white md:hidden">
+          <ul className="mx-auto max-w-6xl space-y-3 py-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`block text-sm transition-colors ${
-                      isActive ? 'text-gray-900 font-medium' : 'text-gray-600 hover:text-gray-900'
+                    className={`block rounded-md px-2 py-2 text-sm transition-colors ${
+                      isActive ? 'bg-gray-50 font-semibold text-gray-950' : 'text-gray-600 hover:text-gray-950'
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >

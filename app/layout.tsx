@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | ABAB Labs',
   },
   description:
-    'ABAB Labs builds, invests, and incubates internet-native brands across media, infrastructure, and consumer applications.',
+    'ABAB Labs builds and operates internet-native software products across information, infrastructure, AI, and communication.',
   icons: {
     icon: [
       { url: '/brand/abab-mark-64.png', sizes: '64x64', type: 'image/png' },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ABAB Labs',
     description:
-      'Build, invest, and incubate internet-native brands.',
+      'Building and operating a focused portfolio of internet-native software products.',
     url: 'https://abablabs.com',
     siteName: 'ABAB Labs',
     locale: 'en_US',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ABAB Labs',
     description:
-      'Build, invest, and incubate internet-native brands.',
+      'Building and operating a focused portfolio of internet-native software products.',
   },
 }
 
@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-ababMint text-gray-900 min-h-screen flex flex-col">
+      <body className="min-h-screen bg-white text-gray-950 antialiased flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
