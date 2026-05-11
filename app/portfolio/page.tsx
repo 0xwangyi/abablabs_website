@@ -12,10 +12,10 @@ export default function PortfolioPage() {
             Portfolio
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
-            Operating products across information, AI, and professional workflows.
+            Operating intelligence systems across information, memory, and reasoning.
           </h1>
-          <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            ABAB Labs maintains a focused portfolio of software products and workflow systems.
+          <p className="mt-6 max-w-3xl text-base leading-7 text-gray-300 md:text-lg md:leading-8">
+            An independently operated stack for information infrastructure, structured intelligence, and long-term systems.
           </p>
         </div>
       </Section>
@@ -23,11 +23,11 @@ export default function PortfolioPage() {
       <Section className="bg-surfaceMutedCool">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-gray-950">
-              Operating products
+            <h2 className="text-2xl font-semibold tracking-tight text-gray-950">
+              Systems in operation
             </h2>
-            <p className="mt-2 text-sm text-gray-500">
-              Current product surfaces across software products and workflow systems.
+            <p className="mt-2 text-sm leading-6 text-gray-500">
+              Current layers across information, structured intelligence, network memory, and cognition.
             </p>
           </div>
         </div>
@@ -43,14 +43,14 @@ export default function PortfolioPage() {
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Discuss a product, platform, or workflow.
+              Discuss systems, infrastructure, and platform access.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-300">
-              Reach out for product partnerships, platform access, customer use cases, or company inquiries.
+              For strategic partnerships, platform access, or infrastructure discussions, contact ABAB Labs directly.
             </p>
           </div>
-          <Button href="/contact" variant="secondary">
-            Contact ABAB Labs
+          <Button href="/contact#contact-channel" variant="secondary">
+            Get in touch
           </Button>
         </div>
       </Section>
