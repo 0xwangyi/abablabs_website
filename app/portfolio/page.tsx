@@ -6,16 +6,16 @@ import { projects } from '@/lib/portfolio'
 export default function PortfolioPage() {
   return (
     <>
-      <Section className="bg-[#F4F6F3]">
-        <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">
+      <Section className="bg-gray-950 text-white">
+        <div className="max-w-4xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababYellow">
             Portfolio
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-950 md:text-6xl">
-            Products operated by ABAB Labs.
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
+            Operating products across information, AI, and professional workflows.
           </h1>
-          <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The portfolio includes operating products across information, AI infrastructure, relationship intelligence, and knowledge systems.
+          <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
+            ABAB Labs maintains a focused portfolio of web-based products and workflow systems.
           </p>
         </div>
       </Section>
@@ -27,11 +27,8 @@ export default function PortfolioPage() {
               Operating products
             </h2>
             <p className="mt-2 text-sm text-gray-500">
-              Current product surfaces across web and selected mobile tools.
+              Current product surfaces across web products and workflow systems.
             </p>
-          </div>
-          <div className="rounded-full border border-ababTeal/25 bg-ababTeal/10 px-3 py-1.5 text-xs font-semibold text-gray-950">
-            All products operating
           </div>
         </div>
 

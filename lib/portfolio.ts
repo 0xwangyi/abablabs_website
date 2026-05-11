@@ -1,8 +1,3 @@
-export interface PublicRecord {
-  label: string
-  href?: string
-}
-
 export interface Project {
   id: string
   name: string
@@ -10,11 +5,8 @@ export interface Project {
   tagline: string
   operatingLine: string
   status: 'Operating'
-  domain: string
   availability: string
   productType: string
-  signals: string[]
-  publicRecords: PublicRecord[]
   ctaLabel: string
   link?: string
 }
@@ -29,16 +21,10 @@ export const projects: Project[] = [
     operatingLine:
       'Updated continuously through editorial and structured information workflows.',
     status: 'Operating',
-    domain: 'ababnews.com',
     availability: 'Web platform',
-    productType: 'Information platform',
-    signals: ['Public Platform', 'Operating'],
-    publicRecords: [
-      { label: 'Website', href: 'https://www.ababnews.com' },
-      { label: 'Product domain' },
-    ],
+    productType: 'Information',
     link: 'https://www.ababnews.com',
-    ctaLabel: 'Visit Platform',
+    ctaLabel: 'Visit product',
   },
   {
     id: 'abab-ok',
@@ -49,16 +35,10 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured knowledge systems, document intelligence, and workflow reasoning.',
     status: 'Operating',
-    domain: 'ababok.com',
-    availability: 'Public beta web platform',
+    availability: 'Web platform',
     productType: 'AI infrastructure',
-    signals: ['Public Beta', 'Operating'],
-    publicRecords: [
-      { label: 'Website', href: 'https://www.ababok.com' },
-      { label: 'Beta access' },
-    ],
     link: 'https://www.ababok.com',
-    ctaLabel: 'Visit Platform',
+    ctaLabel: 'Visit product',
   },
   {
     id: 'abab-time',
@@ -69,16 +49,10 @@ export const projects: Project[] = [
     operatingLine:
       'Built around relationship memory, follow-up workflows, contact timelines, and personal network visibility.',
     status: 'Operating',
-    domain: 'ababtime.com',
     availability: 'Web platform',
     productType: 'Relationship intelligence',
-    signals: ['Public Platform', 'Operating'],
-    publicRecords: [
-      { label: 'Website', href: 'https://www.ababtime.com/' },
-      { label: 'Product domain' },
-    ],
     link: 'https://www.ababtime.com/',
-    ctaLabel: 'Visit Platform',
+    ctaLabel: 'Visit product',
   },
   {
     id: 'abab-word',
@@ -89,15 +63,9 @@ export const projects: Project[] = [
     operatingLine:
       'Built around structured review workflows, vocabulary practice, and knowledge retention.',
     status: 'Operating',
-    domain: 'ababword.com',
     availability: 'Web platform',
     productType: 'Knowledge system',
-    signals: ['Active Product', 'Operating'],
-    publicRecords: [
-      { label: 'Website', href: 'https://www.ababword.com' },
-      { label: 'Product domain' },
-    ],
     link: 'https://www.ababword.com',
-    ctaLabel: 'Visit Platform',
+    ctaLabel: 'Visit product',
   },
 ]
