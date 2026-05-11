@@ -6,19 +6,19 @@ import { projects } from '@/lib/portfolio'
 const trustSignals = [
   {
     value: '4',
-    label: 'focused products',
+    label: 'operating products',
   },
   {
     value: '4',
-    label: 'operating platforms',
+    label: 'public domains',
   },
   {
-    value: 'Public',
-    label: 'platform operations',
+    value: '1',
+    label: 'app product',
   },
   {
-    value: 'U.S.',
-    label: 'California, U.S.',
+    value: 'LLC',
+    label: 'ABAB Labs LLC',
   },
 ]
 
@@ -45,21 +45,26 @@ const operatingSystems = [
   },
 ]
 
-const operatingPrinciples = [
+const operatingRecord = [
   {
-    title: 'Operate public systems',
+    title: 'Legal entity',
     description:
-      'We prioritize products that can improve through continuous operation, recurring usage, and maintained workflows.',
+      'ABAB Labs LLC operates the company website and public product portfolio.',
   },
   {
-    title: 'Work from structured inputs',
+    title: 'Public products',
     description:
-      'Information, documents, discussions, and workflows are organized into reusable operating systems.',
+      'Four operating products are available through public ABAB domains.',
   },
   {
-    title: 'Build for long-term utility',
+    title: 'Product availability',
     description:
-      'The company favors durable systems, clear product boundaries, and practical infrastructure over broad positioning.',
+      'The portfolio includes public web platforms, public beta software, and an app-distributed product.',
+  },
+  {
+    title: 'Workflow coverage',
+    description:
+      'Products cover information, AI infrastructure, relationship intelligence, and knowledge systems.',
   },
 ]
 
@@ -101,13 +106,14 @@ export default function HomePage() {
 
             <div className="hidden rounded-lg border border-gray-200 bg-white/80 p-5 shadow-sm backdrop-blur lg:block">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-400">
-                Operating snapshot
+                Company facts
               </p>
               <div className="mt-5 divide-y divide-gray-100">
                 {[
-                  ['Public platforms', 'ABAB News, ABAB Time'],
-                  ['AI systems', 'ABAB OK'],
-                  ['Knowledge systems', 'ABAB Word'],
+                  ['Legal entity', 'ABAB Labs LLC'],
+                  ['Base', 'California, United States'],
+                  ['Products', '4 operating products'],
+                  ['Availability', 'Public web platforms and app distribution'],
                 ].map(([label, value]) => (
                   <div key={label} className="py-4 first:pt-0 last:pb-0">
                     <p className="text-sm font-semibold text-gray-950">{label}</p>
@@ -156,6 +162,30 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section className="border-y border-gray-200/70 bg-ababMint">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
+              Operating Record
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
+              Public evidence of active product operations.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-gray-600">
+              The company record is organized around public domains, operating products, and maintained product workflows.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {operatingRecord.map((item) => (
+              <div key={item.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-950">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       <Section className="border-y border-gray-200/70 bg-gray-50">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
@@ -166,7 +196,7 @@ export default function HomePage() {
               Operating products and active systems.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600">
-              The portfolio is intentionally small. Each product is tied to a public platform, an active workflow, or a structured system under development.
+              The portfolio is intentionally small. Each product is tied to a public domain, an active workflow, and a clearly identified product surface.
             </p>
           </div>
           <Button href="/portfolio" variant="secondary">
@@ -177,35 +207,6 @@ export default function HomePage() {
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-        </div>
-      </Section>
-
-      <Section className="bg-gray-950 text-white">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababYellow">
-              Operating principles
-            </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Built around products that are operated, maintained, and improved.
-            </h2>
-          </div>
-          <div className="grid gap-4">
-            {operatingPrinciples.map((principle, index) => (
-              <div
-                key={principle.title}
-                className="grid gap-4 border-t border-white/15 pt-5 sm:grid-cols-[64px_1fr]"
-              >
-                <p className="text-sm font-semibold text-ababTeal">
-                  0{index + 1}
-                </p>
-                <div>
-                  <h3 className="text-lg font-semibold">{principle.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-gray-300">{principle.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </Section>
 
