@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-200/70 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
-        <div className="mb-8 grid gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+        <div className="mb-8 grid gap-8 md:grid-cols-[1.25fr_0.75fr_0.75fr_0.75fr]">
           <div>
             <Link href="/" className="mb-4 flex items-center gap-3 text-lg tracking-tight text-gray-950">
               <img
@@ -22,7 +22,10 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              A U.S.-based software company building and operating internet-native products across information, infrastructure, AI, and communication.
+              U.S.-based software company building and operating internet-native products across information, AI, and infrastructure.
+            </p>
+            <p className="mt-3 text-sm text-gray-500">
+              California / United States
             </p>
             <a
               href="mailto:support@abablabs.com"
@@ -43,6 +46,14 @@ export default function Footer() {
               <Link href="/contact" className="text-sm text-gray-500 transition-colors hover:text-gray-950">
                 Contact
               </Link>
+            </div>
+          </div>
+          <div>
+            <h2 className="mb-3 text-sm font-semibold text-gray-950">Operations</h2>
+            <div className="grid gap-2">
+              <p className="text-sm text-gray-500">Public platforms</p>
+              <p className="text-sm text-gray-500">Operating products</p>
+              <p className="text-sm text-gray-500">Professional workflows</p>
             </div>
           </div>
           <div>

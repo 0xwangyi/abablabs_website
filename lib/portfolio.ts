@@ -3,8 +3,10 @@ export interface Project {
   name: string
   category: string
   tagline: string
-  audience: string
-  status: 'Live' | 'Building'
+  operatingLine: string
+  status: 'Operating' | 'In Development'
+  signals: string[]
+  ctaLabel: string
   link?: string
 }
 
@@ -12,55 +14,52 @@ export const projects: Project[] = [
   {
     id: 'abab-news',
     name: 'ABAB News',
-    category: 'Information intelligence',
-    tagline: 'Financial and cognitive infrastructure for information discovery and long-term insight.',
-    audience: 'For readers, builders, and market observers who need durable signal.',
-    status: 'Live',
+    category: 'Information platform',
+    tagline:
+      'A publicly operating information platform focused on financial markets, AI, and long-term signal discovery.',
+    operatingLine:
+      'Updated continuously through editorial and structured information workflows.',
+    status: 'Operating',
+    signals: ['Public Platform', 'Weekly Updated'],
     link: 'https://www.ababnews.com',
+    ctaLabel: 'Visit Platform',
   },
   {
-    id: 'abab-link',
-    name: 'ABAB Link',
-    category: 'Financial identity',
-    tagline: 'An infrastructure layer for organizing and connecting financial links and identities.',
-    audience: 'For teams building cleaner financial navigation and trusted link graphs.',
-    status: 'Live',
-    link: 'https://www.abablink.com',
+    id: 'abab-ok',
+    name: 'ABAB OK',
+    category: 'AI infrastructure',
+    tagline:
+      'An AI infrastructure platform for legal, financial, and professional workflow systems.',
+    operatingLine:
+      'Built around structured knowledge systems, document intelligence, and workflow reasoning.',
+    status: 'Operating',
+    signals: ['Active Product', 'Public Beta'],
+    link: 'https://www.ababok.com',
+    ctaLabel: 'Visit Platform',
   },
   {
-    id: 'abab-cam',
-    name: 'ABAB Cam',
-    category: 'Real-world data',
-    tagline: 'Infrastructure for accessing and verifying real-world camera feeds.',
-    audience: 'For use cases that depend on verifiable, location-aware visual context.',
-    status: 'Live',
-    link: 'https://www.ababcam.com',
+    id: 'abab-time',
+    name: 'ABAB Time',
+    category: 'Relationship intelligence',
+    tagline:
+      'An AI-powered relationship intelligence product for professionals who manage long-term client, partner, and investor relationships.',
+    operatingLine:
+      'Built around relationship memory, follow-up workflows, contact timelines, and personal network visibility.',
+    status: 'Operating',
+    signals: ['Public Platform', 'App Store Product'],
+    link: 'https://www.ababtime.com/',
+    ctaLabel: 'Visit Platform',
   },
   {
     id: 'abab-word',
     name: 'ABAB Word',
     category: 'Knowledge systems',
-    tagline: 'Infrastructure for building and managing personal knowledge through structured learning.',
-    audience: 'For individuals and teams turning learning into long-term memory.',
-    status: 'Building',
-    link: 'https://www.ababword.com',
-  },
-  {
-    id: 'abab-ok',
-    name: 'ABAB OK',
-    category: 'Professional AI',
-    tagline: 'A proprietary vertical AI model developed for legal and professional use cases.',
-    audience: 'For professional workflows that require domain-specific reasoning and reliability.',
-    status: 'Building',
-    link: 'https://www.ababok.com',
-  },
-  {
-    id: 'abab-mail',
-    name: 'ABAB Mail',
-    category: 'Communication infrastructure',
-    tagline: 'Native email infrastructure designed for identity, communication, and long-term use.',
-    audience: 'For durable communication, account identity, and owned digital presence.',
-    status: 'Building',
-    link: 'https://www.ababmail.com',
+    tagline:
+      'A structured learning and vocabulary system designed around long-term memory retention.',
+    operatingLine:
+      'Currently in product development with a focus on structured learning workflows.',
+    status: 'In Development',
+    signals: ['Knowledge System', 'In Development'],
+    ctaLabel: 'In Development',
   },
 ]

@@ -5,66 +5,66 @@ import { projects } from '@/lib/portfolio'
 
 const trustSignals = [
   {
-    value: '6',
-    label: 'portfolio products',
+    value: '4',
+    label: 'focused products',
   },
   {
     value: '3',
-    label: 'live public platforms',
+    label: 'operating platforms',
+  },
+  {
+    value: 'Public',
+    label: 'platform operations',
   },
   {
     value: 'U.S.',
-    label: 'registered company',
-  },
-  {
-    value: 'Long-term',
-    label: 'operator mindset',
+    label: 'California / United States',
   },
 ]
 
-const focusAreas = [
+const operatingSystems = [
   {
-    title: 'Information products',
+    title: 'Public platforms',
     description:
-      'Products that help people discover, organize, and return to useful signal over time.',
+      'Products designed for continuous public operation and long-term information utility.',
   },
   {
-    title: 'Infrastructure layers',
+    title: 'AI infrastructure',
     description:
-      'Shared systems for identity, links, communication, data access, and platform operations.',
+      'Shared intelligence systems for workflows, document understanding, and structured reasoning.',
   },
   {
-    title: 'AI for professional work',
+    title: 'Knowledge systems',
     description:
-      'Vertical models and workflows designed for domains where reliability matters.',
+      'Infrastructure layers designed around memory, organization, and operational reuse.',
   },
   {
-    title: 'Consumer utilities',
+    title: 'Professional workflows',
     description:
-      'Focused applications that turn repeated everyday workflows into owned product surfaces.',
+      'AI systems designed for operational and domain-specific workflows.',
   },
 ]
 
 const operatingPrinciples = [
   {
-    title: 'Build durable assets',
+    title: 'Operate public systems',
     description:
-      'We prioritize products that can compound through data, distribution, identity, or workflow ownership.',
+      'We prioritize products that can improve through continuous operation, recurring usage, and maintained workflows.',
   },
   {
-    title: 'Operate close to users',
+    title: 'Work from structured inputs',
     description:
-      'We keep the product loop tight: ship, measure, learn, and improve the core user experience.',
+      'Information, documents, discussions, and workflows are organized into reusable operating systems.',
   },
   {
-    title: 'Keep systems interoperable',
+    title: 'Build for long-term utility',
     description:
-      'We favor practical, open, and maintainable foundations over short-lived product theater.',
+      'The company favors durable systems, clear product boundaries, and practical infrastructure over broad positioning.',
   },
 ]
 
 export default function HomePage() {
-  const featuredProjects = projects.slice(0, 6)
+  const featuredProjects = projects
 
   return (
     <>
@@ -80,23 +80,28 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">
-              Product studio and operating company
+              U.S.-based product studio and operating company
             </p>
             <h1 className="mt-5 text-5xl font-bold tracking-tight text-gray-950 md:text-7xl">
               ABAB Labs
             </h1>
             <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-gray-950 md:text-4xl">
-              Building durable software platforms for information, identity, AI, and communication.
+              Building and operating durable software platforms for information, AI, and professional workflows.
             </p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600 md:text-lg">
-              We develop and operate a focused portfolio of internet-native products, with an emphasis on long-term utility, technical rigor, and scalable product systems.
-            </p>
+            <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-600 md:text-lg">
+              <p>
+                ABAB Labs develops and operates a focused portfolio of internet-native infrastructure and intelligence products.
+              </p>
+              <p>
+                The company emphasizes operational systems, structured workflows, and long-term product durability.
+              </p>
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="/portfolio" variant="primary">
                 Explore portfolio
               </Button>
               <Button href="/contact" variant="secondary">
-                Partner with us
+                Contact ABAB Labs
               </Button>
             </div>
           </div>
@@ -119,17 +124,17 @@ export default function HomePage() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ababTeal">
-              What we focus on
+              Operating Systems
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              A portfolio built around compounding product surfaces.
+              Products built around continuous operation.
             </h2>
             <p className="mt-5 text-base leading-8 text-gray-600">
-              ABAB Labs concentrates on software areas where product usage can compound through data, identity, distribution, or repeat workflows.
+              ABAB Labs focuses on products that can compound through continuous operation, structured workflows, and durable user utility.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {focusAreas.map((area) => (
+            {operatingSystems.map((area) => (
               <div key={area.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-950">{area.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-gray-600">{area.description}</p>
@@ -146,17 +151,17 @@ export default function HomePage() {
               Portfolio
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Products in market and in development.
+              Operating products and active systems.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600">
-              A clear product map helps investors, partners, and customers understand both current traction and the direction of the company.
+              The portfolio is intentionally small. Each product is tied to a public platform, an active workflow, or a structured system under development.
             </p>
           </div>
           <Button href="/portfolio" variant="secondary">
             View all products
           </Button>
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -170,7 +175,7 @@ export default function HomePage() {
               Operating principles
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Built for credibility, not noise.
+              Built around products that are operated, maintained, and improved.
             </h2>
           </div>
           <div className="grid gap-4">
@@ -199,7 +204,7 @@ export default function HomePage() {
               Investors, partners, and customers
             </p>
             <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Talk to ABAB Labs about product partnerships, strategic distribution, or customer use cases.
+              Contact ABAB Labs about product partnerships, platform access, or professional workflow use cases.
             </h2>
           </div>
           <Button href="/contact" variant="primary">

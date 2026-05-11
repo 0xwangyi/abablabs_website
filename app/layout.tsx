@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | ABAB Labs',
   },
   description:
-    'ABAB Labs builds and operates internet-native software products across information, infrastructure, AI, and communication.',
+    'ABAB Labs builds and operates internet-native software products across information, AI, infrastructure, and professional workflows.',
   icons: {
     icon: [
       { url: '/brand/abab-mark-64.png', sizes: '64x64', type: 'image/png' },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ABAB Labs',
     description:
-      'Building and operating a focused portfolio of internet-native software products.',
+      'Building and operating a focused portfolio of internet-native infrastructure and intelligence products.',
     url: 'https://abablabs.com',
     siteName: 'ABAB Labs',
     locale: 'en_US',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ABAB Labs',
     description:
-      'Building and operating a focused portfolio of internet-native software products.',
+      'Building and operating a focused portfolio of internet-native infrastructure and intelligence products.',
   },
 }
 
