@@ -5,8 +5,10 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const externalLabel = `${project.name} — ${project.ctaLabel} (opens in new tab)`
+
   return (
-    <article className="group flex h-full min-h-[320px] flex-col rounded-lg border border-gray-200 bg-white p-6 transition-colors duration-200 hover:border-gray-300">
+    <article className="group flex h-full min-h-[280px] flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md motion-reduce:transform-none motion-reduce:hover:translate-y-0">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-400">
@@ -15,13 +17,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="mt-2 text-lg font-semibold text-gray-950">{project.name}</h3>
         </div>
         <span className="mt-1 inline-flex shrink-0 items-center gap-2 text-xs font-medium text-gray-500">
-          <span className="h-1.5 w-1.5 rounded-full bg-ababTeal" aria-hidden="true" />
+          <span
+            className="h-2 w-2 shrink-0 rounded-full bg-ababTeal ring-2 ring-ababRed/40 ring-offset-2 ring-offset-white"
+            aria-hidden="true"
+          />
           {project.status}
         </span>
       </div>
-      <div className="mt-8 space-y-4 md:min-h-[150px]">
-        <p className="text-sm leading-7 text-gray-800">{project.tagline}</p>
-        <p className="text-sm leading-7 text-gray-500">{project.operatingLine}</p>
+      <div className="mt-8 flex flex-1 flex-col space-y-4 md:min-h-[132px]">
+        <p className="line-clamp-4 text-sm leading-7 text-gray-800">{project.tagline}</p>
+        <p className="line-clamp-3 text-sm leading-7 text-gray-500">{project.operatingLine}</p>
       </div>
 
       <div className="mt-auto border-t border-gray-100 pt-5">
@@ -30,6 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={externalLabel}
             className="inline-flex text-sm font-semibold text-gray-950 transition-colors group-hover:text-ababTeal"
           >
             {project.ctaLabel}

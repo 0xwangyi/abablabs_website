@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -41,10 +48,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-gray-950 antialiased flex flex-col">
+    <html lang="en" className={dmSans.variable}>
+      <body className="flex min-h-screen flex-col bg-surfacePage font-sans text-gray-950 antialiased">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main
+          id="main-content"
+          className="flex-1 outline-none focus-visible:ring-2 focus-visible:ring-ababTeal focus-visible:ring-offset-2 focus-visible:ring-offset-surfacePage"
+          tabIndex={-1}
+        >
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

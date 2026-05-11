@@ -32,7 +32,19 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-gray-900 bg-gray-950 px-4 py-16 text-white md:px-6 md:py-24">
-        <div className="relative z-10 mx-auto max-w-6xl">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_60%_at_50%_-15%,rgba(78,205,196,0.14),transparent_55%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_100%_0%,rgba(254,109,115,0.07),transparent_52%)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03)_0px,transparent_32px)] opacity-90"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-6xl animate-fade-in-up motion-reduce:animate-none motion-reduce:opacity-100">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold text-ababYellow">
@@ -64,6 +76,24 @@ export default function HomePage() {
                   Contact ABAB Labs
                 </Button>
               </div>
+
+              <div className="mt-10 rounded-lg border border-white/10 bg-white/[0.04] p-5 backdrop-blur lg:hidden">
+                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-gray-500">
+                  Operating snapshot
+                </p>
+                <div className="mt-4 divide-y divide-white/10">
+                  {[
+                    ['Web products', 'ABAB News, ABAB Time'],
+                    ['AI systems', 'ABAB OK'],
+                    ['Knowledge systems', 'ABAB Word'],
+                  ].map(([label, value]) => (
+                    <div key={label} className="py-3 first:pt-0 last:pb-0">
+                      <p className="text-sm font-semibold text-white">{label}</p>
+                      <p className="mt-1 text-sm leading-6 text-gray-400">{value}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="hidden rounded-lg border border-white/10 bg-white/[0.04] p-5 backdrop-blur lg:block">
@@ -87,7 +117,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section className="border-b border-gray-200/70 bg-[#F3F4F1]">
+      <Section className="border-b border-gray-200/70 bg-surfaceMuted">
         <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
           <div className="max-w-xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababTeal">
@@ -114,7 +144,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section className="border-y border-gray-200/70 bg-[#E8EBED]">
+      <Section className="border-y border-gray-200/70 bg-surfaceMutedSoft">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababTeal">

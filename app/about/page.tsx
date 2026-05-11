@@ -29,7 +29,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section className="bg-[#F3F4F1]">
+      <Section className="bg-surfaceMuted">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-950">
@@ -50,7 +50,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section className="border-y border-gray-200/70 bg-[#E8EBED]">
+      <Section className="border-y border-gray-200/70 bg-surfaceMutedSoft">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-950">
