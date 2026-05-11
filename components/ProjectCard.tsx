@@ -5,11 +5,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const statusColor =
-    project.status === 'Operating'
-      ? 'bg-ababTeal/10 text-gray-950 border-ababTeal/25'
-      : 'bg-gray-100 text-gray-700 border-gray-200'
-
   const CardContent = (
     <>
       <div className="flex items-start justify-between gap-4">
@@ -19,7 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </p>
           <h3 className="mt-2 text-lg font-semibold text-gray-950">{project.name}</h3>
         </div>
-        <span className={`shrink-0 rounded-full border px-2.5 py-1 text-xs font-semibold ${statusColor}`}>
+        <span className="shrink-0 rounded-full border border-ababTeal/25 bg-ababTeal/10 px-2.5 py-1 text-xs font-semibold text-gray-950">
           {project.status}
         </span>
       </div>

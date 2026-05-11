@@ -9,7 +9,7 @@ const trustSignals = [
     label: 'focused products',
   },
   {
-    value: '3',
+    value: '4',
     label: 'operating platforms',
   },
   {
@@ -107,7 +107,7 @@ export default function HomePage() {
                 {[
                   ['Public platforms', 'ABAB News, ABAB Time'],
                   ['AI systems', 'ABAB OK'],
-                  ['Development', 'ABAB Word'],
+                  ['Knowledge systems', 'ABAB Word'],
                 ].map(([label, value]) => (
                   <div key={label} className="py-4 first:pt-0 last:pb-0">
                     <p className="text-sm font-semibold text-gray-950">{label}</p>

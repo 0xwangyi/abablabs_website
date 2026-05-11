@@ -4,7 +4,7 @@ export interface Project {
   category: string
   tagline: string
   operatingLine: string
-  status: 'Operating' | 'In Development'
+  status: 'Operating'
   signals: string[]
   ctaLabel: string
   link?: string
@@ -55,11 +55,12 @@ export const projects: Project[] = [
     name: 'ABAB Word',
     category: 'Knowledge systems',
     tagline:
-      'A structured learning and vocabulary system designed around long-term memory retention.',
+      'An operating learning and vocabulary system designed around long-term memory retention.',
     operatingLine:
-      'Currently in product development with a focus on structured learning workflows.',
-    status: 'In Development',
-    signals: ['Knowledge System', 'In Development'],
-    ctaLabel: 'In Development',
+      'Built around structured review workflows, vocabulary practice, and knowledge retention.',
+    status: 'Operating',
+    signals: ['Active Product', 'Knowledge System'],
+    link: 'https://www.ababword.com',
+    ctaLabel: 'Visit Platform',
   },
 ]
