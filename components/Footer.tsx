@@ -26,7 +26,7 @@ export default function Footer() {
               ABAB Labs LLC
             </p>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              California-based software company operating products across information, AI infrastructure, and professional workflows.
+              California-based software company operating public web products and iOS apps across information, AI infrastructure, and professional workflows.
             </p>
             <p className="mt-3 text-sm text-gray-500">
               California, United States

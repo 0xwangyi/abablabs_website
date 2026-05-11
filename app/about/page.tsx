@@ -24,7 +24,7 @@ export default function AboutPage() {
             ABAB Labs builds and operates software products.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The company focuses on information platforms, AI infrastructure, knowledge systems, and professional workflows.
+            The company operates public web products and iOS apps across information platforms, AI infrastructure, knowledge systems, and professional workflows.
           </p>
         </div>
       </Section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base leading-8 text-gray-700">
             <p>
-              ABAB Labs is a U.S.-based software company focused on building and operating internet-native products with long-term utility.
+              ABAB Labs is a U.S.-based software company focused on building and operating internet-native products with long-term utility across public domains and iOS distribution.
             </p>
             <p>
               Our work centers on operating systems for information discovery, structured intelligence, document understanding, relationship workflows, and AI-assisted professional workflows.
