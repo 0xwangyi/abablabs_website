@@ -22,10 +22,10 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              U.S.-based software company building and operating internet-native products across information, AI, and infrastructure.
+              California-based software company operating products across information, AI infrastructure, and professional workflows.
             </p>
             <p className="mt-3 text-sm text-gray-500">
-              California / United States
+              California, United States
             </p>
             <a
               href="mailto:support@abablabs.com"
