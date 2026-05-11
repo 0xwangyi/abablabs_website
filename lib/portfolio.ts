@@ -17,7 +17,7 @@ export const projects: Project[] = [
     name: 'ABAB News',
     category: 'Information intelligence',
     tagline:
-      'An information intelligence network for markets, AI, and long-term signal.',
+      'Information intelligence network for markets, AI, and long-term signal.',
     operatingLine:
       'Public information organized into durable, decision-grade systems.',
     status: 'Operating',
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     name: 'ABAB OK',
     category: 'Structured AI systems',
     tagline:
-      'AI infrastructure for reasoning over legal, financial, and professional knowledge.',
+      'Structured AI infrastructure for legal, financial, and professional reasoning.',
     operatingLine:
       'Designed for structured documents, domain logic, and high-context work.',
     status: 'Operating',
@@ -45,9 +45,9 @@ export const projects: Project[] = [
     name: 'ABAB Time',
     category: 'Network intelligence',
     tagline:
-      'A relationship memory layer for long-horizon professional networks.',
+      'Network memory layer for long-horizon professional relationships.',
     operatingLine:
-      'Maintains context across people, timelines, follow-ups, and institutional memory.',
+      'Maintains context across people, time, relationships, and institutional memory.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Relationship intelligence',
@@ -59,9 +59,9 @@ export const projects: Project[] = [
     name: 'ABAB Word',
     category: 'Cognitive systems',
     tagline:
-      'A memory operating system for language, learning, and knowledge retention.',
+      'Cognitive memory system for language, recall, and long-term knowledge retention.',
     operatingLine:
-      'Designed for repeat cognition, structured review, and durable recall.',
+      'Structures repetition, context, and recall into durable learning memory.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Knowledge system',

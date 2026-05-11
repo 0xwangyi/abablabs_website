@@ -4,11 +4,11 @@ import Section from '@/components/Section'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'ABAB Labs builds intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.',
+    'ABAB Labs builds intelligence infrastructure for signal discovery, memory systems, and machine-assisted reasoning.',
   openGraph: {
     title: 'About | ABAB Labs',
     description:
-      'ABAB Labs builds intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.',
+      'ABAB Labs builds intelligence infrastructure for signal discovery, memory systems, and machine-assisted reasoning.',
   },
 }
 
@@ -21,10 +21,10 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
-            ABAB Labs builds intelligence systems for structured knowledge.
+            ABAB Labs builds intelligence infrastructure for memory and reasoning.
           </h1>
-          <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            Information infrastructure for signal discovery, memory, and machine-assisted reasoning.
+          <p className="mt-6 text-base leading-7 text-gray-300 md:text-lg md:leading-8">
+            Long-term systems for signal discovery, structured knowledge, and machine-assisted reasoning.
           </p>
         </div>
       </Section>
@@ -36,15 +36,15 @@ export default function AboutPage() {
               Systems orientation
             </h2>
           </div>
-          <div className="space-y-5 text-[15px] leading-8 text-gray-700">
+          <div className="space-y-4 text-[15px] leading-7 text-gray-700">
             <p>
-              ABAB Labs works on long-horizon information infrastructure: systems that collect, structure, retain, and reason over knowledge.
+              ABAB Labs builds information systems that structure knowledge, preserve context, and support reasoning over time.
             </p>
             <p>
-              The work spans public information networks, structured AI systems, relationship memory, and cognitive learning systems.
+              Current work spans public information networks, structured AI infrastructure, relationship memory, and cognitive learning systems.
             </p>
             <p>
-              The company favors durable architecture, clear operating boundaries, and systems that improve through sustained operation.
+              Operated by a small systems-focused team, the company prioritizes durable architecture, clear operating boundaries, and sustained operation.
             </p>
           </div>
         </div>
@@ -59,9 +59,9 @@ export default function AboutPage() {
           </div>
           <div className="border-y border-gray-300/70">
             {[
-              ['Long-horizon operation', 'Build systems that can be operated, maintained, and improved over years.'],
-              ['Structured knowledge', 'Organize information into durable memory, context, and reasoning surfaces.'],
-              ['Signal discipline', 'Prioritize clear boundaries, high-quality inputs, and compounding operational intelligence.'],
+              ['Long-horizon operation', 'Build systems that can be operated, audited, and improved over years.'],
+              ['Structured knowledge', 'Turn information into persistent memory, context, and reasoning surfaces.'],
+              ['Signal discipline', 'Favor clear boundaries, high-quality inputs, and operational intelligence that compounds over time.'],
             ].map(([title, description]) => (
               <div
                 key={title}

@@ -23,7 +23,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              Intelligence systems and information infrastructure for structured knowledge, memory, and machine-assisted reasoning.
+              Intelligence infrastructure for structured knowledge, memory systems, and machine-assisted reasoning.
             </p>
             <a
               href="mailto:support@abablabs.com"
