@@ -22,14 +22,8 @@ export default function Footer() {
                 <span className="font-medium text-gray-600"> Labs</span>
               </span>
             </Link>
-            <p className="mb-3 text-sm font-semibold text-gray-950">
-              ABAB Labs LLC
-            </p>
             <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              California-based software company operating public web products and iOS apps across information, AI infrastructure, and professional workflows.
-            </p>
-            <p className="mt-3 text-sm text-gray-500">
-              California, United States
+              Software company operating web products and selected mobile tools across information, AI infrastructure, and professional workflows.
             </p>
             <a
               href="mailto:support@abablabs.com"
@@ -90,7 +84,7 @@ export default function Footer() {
         <div className="border-t border-gray-100 pt-5">
           <div className="flex flex-col gap-2 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
             <p>© {currentYear} ABAB Labs. All rights reserved.</p>
-            <p>ABAB Labs LLC</p>
+            <p>Software products and digital platforms</p>
           </div>
         </div>
       </div>

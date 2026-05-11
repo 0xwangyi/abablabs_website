@@ -6,28 +6,28 @@ import { projects } from '@/lib/portfolio'
 export default function PortfolioPage() {
   return (
     <>
-      <Section className="bg-ababMint">
+      <Section className="bg-[#F4F6F3]">
         <div className="max-w-3xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-gray-500">
             Portfolio
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-950 md:text-6xl">
-            Public products operated by ABAB Labs.
+            Products operated by ABAB Labs.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The portfolio includes four operating products across information, AI infrastructure, relationship intelligence, and knowledge systems. Each product has a public web domain and iOS app distribution.
+            The portfolio includes operating products across information, AI infrastructure, relationship intelligence, and knowledge systems.
           </p>
         </div>
       </Section>
 
-      <Section className="bg-white">
+      <Section className="bg-[#ECEFF1]">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-gray-950">
               Operating products
             </h2>
             <p className="mt-2 text-sm text-gray-500">
-              {projects.length} public products with current operating status, public records, and iOS app availability.
+              Current product surfaces across web and selected mobile tools.
             </p>
           </div>
           <div className="rounded-full border border-ababTeal/25 bg-ababTeal/10 px-3 py-1.5 text-xs font-semibold text-gray-950">
