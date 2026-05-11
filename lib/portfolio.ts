@@ -15,11 +15,11 @@ export const projects: Project[] = [
   {
     id: 'abab-news',
     name: 'ABAB News',
-    category: 'Information platform',
+    category: 'Information intelligence',
     tagline:
-      'A publicly operating information platform focused on financial markets, AI, and long-term signal discovery.',
+      'An information intelligence network for markets, AI, and long-term signal.',
     operatingLine:
-      'Updated continuously through editorial and structured information workflows.',
+      'Public information organized into durable, decision-grade systems.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Information',
@@ -29,11 +29,11 @@ export const projects: Project[] = [
   {
     id: 'abab-ok',
     name: 'ABAB OK',
-    category: 'AI infrastructure',
+    category: 'Structured AI systems',
     tagline:
-      'An AI infrastructure platform for legal, financial, and professional workflow systems.',
+      'AI infrastructure for reasoning over legal, financial, and professional knowledge.',
     operatingLine:
-      'Built around structured knowledge systems, document intelligence, and workflow reasoning.',
+      'Designed for structured documents, domain logic, and high-context work.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'AI infrastructure',
@@ -43,11 +43,11 @@ export const projects: Project[] = [
   {
     id: 'abab-time',
     name: 'ABAB Time',
-    category: 'Relationship intelligence',
+    category: 'Network intelligence',
     tagline:
-      'An AI-powered relationship intelligence product for professionals who manage long-term client, partner, and investor relationships.',
+      'A relationship memory layer for long-horizon professional networks.',
     operatingLine:
-      'Built around relationship memory, follow-up workflows, contact timelines, and personal network visibility.',
+      'Maintains context across people, timelines, follow-ups, and institutional memory.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Relationship intelligence',
@@ -57,11 +57,11 @@ export const projects: Project[] = [
   {
     id: 'abab-word',
     name: 'ABAB Word',
-    category: 'Knowledge systems',
+    category: 'Cognitive systems',
     tagline:
-      'An operating learning and vocabulary system designed around long-term memory retention.',
+      'A memory operating system for language, learning, and knowledge retention.',
     operatingLine:
-      'Built around structured review workflows, vocabulary practice, and knowledge retention.',
+      'Designed for repeat cognition, structured review, and durable recall.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Knowledge system',
