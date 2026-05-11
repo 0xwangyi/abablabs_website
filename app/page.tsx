@@ -13,8 +13,8 @@ const trustSignals = [
     label: 'public domains',
   },
   {
-    value: '1',
-    label: 'app product',
+    value: '4',
+    label: 'iOS apps',
   },
   {
     value: 'LLC',
@@ -45,26 +45,30 @@ const operatingSystems = [
   },
 ]
 
-const operatingRecord = [
+const companyRecord = [
   {
     title: 'Legal entity',
     description:
-      'ABAB Labs LLC operates the company website and public product portfolio.',
+      'ABAB Labs LLC is listed as the operating company for the website and product portfolio.',
   },
   {
-    title: 'Public products',
-    description:
-      'Four operating products are available through public ABAB domains.',
+    title: 'Company base',
+    description: 'California, United States.',
   },
   {
-    title: 'Product availability',
+    title: 'Public domains',
     description:
-      'The portfolio includes public web platforms, public beta software, and an app-distributed product.',
+      'The company lists public product domains for ABAB News, ABAB OK, ABAB Time, and ABAB Word.',
   },
   {
-    title: 'Workflow coverage',
+    title: 'iOS distribution',
     description:
-      'Products cover information, AI infrastructure, relationship intelligence, and knowledge systems.',
+      'All four products have iOS apps available through public App Store distribution.',
+  },
+  {
+    title: 'Contact and legal pages',
+    description:
+      'The company publishes support@abablabs.com, Terms of Service, and Privacy Policy pages.',
   },
 ]
 
@@ -113,7 +117,7 @@ export default function HomePage() {
                   ['Legal entity', 'ABAB Labs LLC'],
                   ['Base', 'California, United States'],
                   ['Products', '4 operating products'],
-                  ['Availability', 'Public web platforms and app distribution'],
+                  ['Availability', 'Public domains and iOS apps'],
                 ].map(([label, value]) => (
                   <div key={label} className="py-4 first:pt-0 last:pb-0">
                     <p className="text-sm font-semibold text-gray-950">{label}</p>
@@ -166,17 +170,17 @@ export default function HomePage() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-ababTeal">
-              Operating Record
+              Company Record
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Public evidence of active product operations.
+              Public evidence for company and product operations.
             </h2>
             <p className="mt-5 text-base leading-8 text-gray-600">
-              The company record is organized around public domains, operating products, and maintained product workflows.
+              The company record is organized around entity information, public domains, iOS distribution, contact details, and legal pages.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {operatingRecord.map((item) => (
+            {companyRecord.map((item) => (
               <div key={item.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-950">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-gray-600">{item.description}</p>

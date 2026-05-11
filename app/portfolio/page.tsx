@@ -15,7 +15,7 @@ export default function PortfolioPage() {
             Public products operated by ABAB Labs.
           </h1>
           <p className="mt-6 text-base leading-8 text-gray-600 md:text-lg">
-            The portfolio includes four operating products across information, AI infrastructure, relationship intelligence, and knowledge systems.
+            The portfolio includes four operating products across information, AI infrastructure, relationship intelligence, and knowledge systems. Each product has a public web domain and iOS app distribution.
           </p>
         </div>
       </Section>
@@ -27,7 +27,7 @@ export default function PortfolioPage() {
               Operating products
             </h2>
             <p className="mt-2 text-sm text-gray-500">
-              {projects.length} public products with current operating status.
+              {projects.length} public products with current operating status, public records, and iOS app availability.
             </p>
           </div>
           <div className="rounded-full border border-ababTeal/25 bg-ababTeal/10 px-3 py-1.5 text-xs font-semibold text-gray-950">
