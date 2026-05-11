@@ -59,9 +59,9 @@ export const projects: Project[] = [
     name: 'ABAB Word',
     category: 'Cognitive systems',
     tagline:
-      'Cognitive memory system for language, recall, and long-term knowledge retention.',
+      'Cognitive memory infrastructure for recall, retention, and structured learning.',
     operatingLine:
-      'Structures repetition, context, and recall into durable learning memory.',
+      'Turns repetition and context into durable knowledge systems.',
     status: 'Operating',
     availability: 'Software platform',
     productType: 'Knowledge system',

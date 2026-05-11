@@ -5,24 +5,24 @@ import { projects } from '@/lib/portfolio'
 
 const operatingSystems = [
   {
-    title: 'Product surfaces',
+    title: 'Intelligence layers',
     description:
-      'Software products designed for continuous operation and recurring use.',
+      'Systems designed to structure information, memory, and reasoning over time.',
   },
   {
     title: 'AI infrastructure',
     description:
-      'Shared intelligence systems for workflows, document understanding, and structured reasoning.',
+      'Structured intelligence systems for documents, domain logic, and machine-assisted reasoning.',
   },
   {
-    title: 'Knowledge systems',
+    title: 'Memory systems',
     description:
-      'Infrastructure layers designed around memory, organization, and operational reuse.',
+      'Infrastructure for context, recall, knowledge retention, and operational continuity.',
   },
   {
-    title: 'Professional workflows',
+    title: 'Operational intelligence',
     description:
-      'AI systems designed for operational and domain-specific workflows.',
+      'Durable systems for high-context work, decision support, and institutional memory.',
   },
 ]
 
@@ -48,20 +48,20 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold text-ababYellow">
-                Building and operating software products
+                Intelligence infrastructure
               </p>
               <h1 className="mt-5 text-5xl font-bold tracking-tight text-white md:text-7xl">
                 ABAB Labs
               </h1>
               <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-white md:text-4xl">
-                Operating software platforms for information, AI, and professional workflows.
+                Operating systems for information, memory, and machine-assisted reasoning.
               </p>
-              <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-gray-300 md:text-lg">
+              <div className="mt-6 max-w-2xl space-y-3 text-base leading-7 text-gray-300 md:text-lg md:leading-8">
                 <p>
-                  ABAB Labs develops internet-native infrastructure and intelligence products used through software products and structured workflows.
+                  ABAB Labs builds long-horizon intelligence infrastructure for structured knowledge, signal discovery, and operational memory.
                 </p>
                 <p>
-                  The company focuses on practical systems, operational reliability, and long-term product durability.
+                  The company favors practical systems, operational reliability, and durable architecture.
                 </p>
               </div>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -83,9 +83,9 @@ export default function HomePage() {
                 </p>
                 <div className="mt-4 divide-y divide-white/10">
                   {[
-                    ['Software products', 'ABAB News, ABAB Time'],
-                    ['AI systems', 'ABAB OK'],
-                    ['Knowledge systems', 'ABAB Word'],
+                    ['Information systems', 'ABAB News'],
+                    ['Structured AI', 'ABAB OK'],
+                    ['Memory systems', 'ABAB Time, ABAB Word'],
                   ].map(([label, value]) => (
                     <div key={label} className="py-3 first:pt-0 last:pb-0">
                       <p className="text-sm font-semibold text-white">{label}</p>
@@ -102,9 +102,9 @@ export default function HomePage() {
               </p>
               <div className="mt-5 divide-y divide-white/10">
                 {[
-                  ['Software products', 'ABAB News, ABAB Time'],
-                  ['AI systems', 'ABAB OK'],
-                  ['Knowledge systems', 'ABAB Word'],
+                  ['Information systems', 'ABAB News'],
+                  ['Structured AI', 'ABAB OK'],
+                  ['Memory systems', 'ABAB Time, ABAB Word'],
                 ].map(([label, value]) => (
                   <div key={label} className="py-4 first:pt-0 last:pb-0">
                     <p className="text-sm font-semibold text-white">{label}</p>
@@ -124,10 +124,10 @@ export default function HomePage() {
               Operating Systems
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Products built around continuous operation.
+              Systems built for sustained operation.
             </h2>
-            <p className="mt-5 text-base leading-8 text-gray-600">
-              ABAB Labs focuses on products that can compound through continuous operation, structured workflows, and durable user utility.
+            <p className="mt-5 text-base leading-7 text-gray-600">
+              ABAB Labs develops systems that improve through sustained operation, structured knowledge, and durable use.
             </p>
           </div>
           <div className="border-y border-gray-300/70">
@@ -151,10 +151,10 @@ export default function HomePage() {
               Portfolio
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
-              Operating products and active systems.
+              Operating systems and active layers.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600">
-              The portfolio is focused. Each product is tied to an active workflow and a working product surface.
+            <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
+              A focused portfolio across information intelligence, structured AI, network memory, and cognitive systems.
             </p>
           </div>
           <Button href="/portfolio" variant="secondary">
@@ -175,14 +175,14 @@ export default function HomePage() {
               Contact
             </p>
             <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
-              Contact ABAB Labs for partnerships and platform access.
+              Connect on systems, infrastructure, and platform access.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-gray-300">
-              For customer, partner, or company inquiries, reach the team directly.
+            <p className="mt-4 max-w-2xl text-base leading-7 text-gray-300">
+              For strategic partnerships, research collaboration, or infrastructure discussions, contact ABAB Labs directly.
             </p>
           </div>
-          <Button href="/contact" variant="primary" className="!bg-white !text-gray-950 hover:!bg-gray-100">
-            Contact ABAB Labs
+          <Button href="/contact#contact-channel" variant="primary" className="!bg-white !text-gray-950 hover:!bg-gray-100">
+            Get in touch
           </Button>
         </div>
       </Section>
