@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gray-200 px-4 md:px-6">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 py-5 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 py-5 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
         <p>© {currentYear} ABAB Labs LLC</p>
         <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-5 gap-y-2">
           {footerLinks.map((link) => (

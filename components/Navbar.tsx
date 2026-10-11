@@ -84,7 +84,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/95 px-4 backdrop-blur md:px-6">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between" aria-label="Primary">
+      <nav className="flex h-16 items-center justify-between" aria-label="Primary">
         <Link
           href="/"
           className="flex items-center gap-3 text-xl tracking-tight text-gray-950"
@@ -176,7 +176,7 @@ export default function Navbar() {
           aria-modal="true"
           aria-label="Mobile navigation"
         >
-          <ul className="mx-auto max-w-6xl space-y-1 py-4">
+          <ul className="space-y-1 py-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
