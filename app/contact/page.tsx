@@ -1,64 +1,24 @@
 import type { Metadata } from 'next'
-import Section from '@/components/Section'
-import Button from '@/components/Button'
 import { contactEmail, contactEmailHref } from '@/lib/contact'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description:
-    'Contact ABAB Labs for platform access, strategic partnerships, research collaboration, and infrastructure discussions.',
+  description: `Email ABAB Labs at ${contactEmail}.`,
 }
 
 export default function ContactPage() {
   return (
-    <>
-      <Section className="bg-gray-950 text-white">
-        <div className="max-w-3xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ababYellow">
-            Contact
-          </p>
-          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">
-            Connect with ABAB Labs.
-          </h1>
-          <p className="mt-6 text-base leading-8 text-gray-300 md:text-lg">
-            A direct channel for platform access, strategic partnerships, research collaboration, and infrastructure discussions across intelligence systems.
-          </p>
-        </div>
-      </Section>
-
-      <Section id="contact-channel" className="scroll-mt-16 bg-surfaceMuted">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-lg border border-gray-200 bg-white p-6 md:p-7">
-            <h2 className="text-xl font-semibold tracking-tight text-gray-950">Direct channel</h2>
-            <p className="mt-3 text-sm leading-7 text-gray-600">
-              For considered inquiries related to ABAB Labs platforms, systems, and long-term partnerships.
-            </p>
-            <div className="mt-6">
-              <Button
-                href={contactEmailHref}
-                ariaLabel={`Email ABAB Labs at ${contactEmail}`}
-                variant="primary"
-              >
-                {contactEmail}
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              ['Platform access', 'Requests for access to ABAB Labs products, systems, and intelligence platforms.'],
-              ['Strategic partnerships', 'Long-term partnerships across information systems, AI infrastructure, and knowledge networks.'],
-              ['Research collaboration', 'Applied research across structured intelligence, cognition, networks, and AI systems.'],
-              ['Infrastructure discussions', 'Conversations with teams and institutions building durable operating systems.'],
-            ].map(([title, description]) => (
-              <div key={title} className="rounded-lg border border-gray-200 bg-white p-5 md:p-6">
-                <h3 className="text-base font-semibold tracking-tight text-gray-950">{title}</h3>
-                <p className="mt-2 text-sm leading-7 text-gray-600">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-    </>
+    <section id="contact-channel" className="scroll-mt-16 px-4 py-24 md:px-6 md:py-36">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-semibold tracking-tight text-gray-950 md:text-5xl">Contact</h1>
+        <a
+          href={contactEmailHref}
+          aria-label={`Email ABAB Labs at ${contactEmail}`}
+          className="mt-6 inline-block text-lg text-gray-950 underline underline-offset-4"
+        >
+          {contactEmail}
+        </a>
+      </div>
+    </section>
   )
 }

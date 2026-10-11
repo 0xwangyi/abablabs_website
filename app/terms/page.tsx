@@ -96,7 +96,7 @@ export default function TermsPage() {
               If you have any questions about these Terms of Service, please contact us at{' '}
               <a
                 href={contactEmailHref}
-                className="text-ababTeal hover:underline"
+                className="font-medium text-gray-950 underline underline-offset-4"
               >
                 {contactEmail}
               </a>.

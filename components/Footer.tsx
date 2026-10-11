@@ -1,94 +1,32 @@
 import Link from 'next/link'
-import { projects } from '@/lib/portfolio'
 import { contactEmail, contactEmailHref } from '@/lib/contact'
+
+const footerLinks = [
+  { href: '/terms', label: 'Terms' },
+  { href: '/privacy', label: 'Privacy' },
+]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-gray-200/70 bg-surfacePage">
-      <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
-        <div className="mb-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.8fr_0.85fr_0.8fr]">
-          <div>
-            <Link href="/" className="mb-4 flex items-center gap-3 text-lg tracking-tight text-gray-950">
-              <img
-                src="/brand/abab-mark.svg"
-                alt="ABAB Labs"
-                width={28}
-                height={28}
-                className="h-7 w-7"
-              />
-              <span>
-                <span className="font-bold">ABAB</span>
-                <span className="font-medium text-gray-600"> Labs</span>
-              </span>
+    <footer className="border-t border-gray-200 px-4 md:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 py-5 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© {currentYear} ABAB Labs LLC</p>
+        <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          {footerLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="transition-colors hover:text-gray-950">
+              {link.label}
             </Link>
-            <p className="max-w-sm text-sm leading-relaxed text-gray-600">
-              Intelligence infrastructure for structured knowledge, memory systems, and machine-assisted reasoning.
-            </p>
-            <a
-              href={contactEmailHref}
-              aria-label={`Email ABAB Labs at ${contactEmail}`}
-              className="mt-3 inline-block text-sm font-semibold text-gray-950 hover:text-ababTeal"
-            >
-              {contactEmail}
-            </a>
-          </div>
-          <div>
-            <h2 className="mb-3 text-sm font-semibold text-gray-950">Company</h2>
-            <div className="grid gap-2">
-              <Link href="/portfolio" className="text-sm text-gray-500 transition-colors hover:text-gray-950">
-                Portfolio
-              </Link>
-              <Link href="/about" className="text-sm text-gray-500 transition-colors hover:text-gray-950">
-                About
-              </Link>
-              <Link href="/contact" className="text-sm text-gray-500 transition-colors hover:text-gray-950">
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-3 text-sm font-semibold text-gray-950">Products</h2>
-            <div className="grid gap-2">
-              {projects.map((project) => (
-                <a
-                  key={project.id}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${project.name} (opens in new tab)`}
-                  className="text-sm text-gray-500 transition-colors hover:text-ababRed motion-reduce:hover:text-gray-950"
-                >
-                  {project.name}
-                </a>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-3 text-sm font-semibold text-gray-950">Legal</h2>
-            <div className="grid gap-2">
-              <Link
-                href="/terms"
-                className="text-sm text-gray-500 transition-colors hover:text-gray-950"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-sm text-gray-500 transition-colors hover:text-gray-950"
-              >
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-100 pt-5">
-          <div className="text-xs text-gray-400">
-            <p>© {currentYear} ABAB Labs. All rights reserved.</p>
-          </div>
-        </div>
+          ))}
+          <a
+            href={contactEmailHref}
+            aria-label={`Email ABAB Labs at ${contactEmail}`}
+            className="transition-colors hover:text-gray-950"
+          >
+            {contactEmail}
+          </a>
+        </nav>
       </div>
     </footer>
   )

@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const navLinks = [
-  { href: '/portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -113,7 +112,7 @@ export default function Navbar() {
                     href={link.href}
                     className={`relative pb-1 text-sm font-medium transition-colors ${
                       isActive
-                        ? 'text-gray-950 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-ababTeal'
+                        ? 'text-gray-950 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-gray-950'
                         : 'text-gray-600 hover:text-gray-950'
                     }`}
                   >
@@ -123,12 +122,6 @@ export default function Navbar() {
               )
             })}
           </ul>
-          <Link
-            href="/contact#contact-channel"
-            className="rounded-md bg-gray-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
-          >
-            Get in touch
-          </Link>
         </div>
 
         <button
@@ -203,15 +196,6 @@ export default function Navbar() {
               )
             })}
           </ul>
-          <div className="mx-auto max-w-6xl border-t border-gray-100 px-2 pb-4 pt-2">
-            <Link
-              href="/contact#contact-channel"
-              className="block rounded-md bg-gray-950 px-3 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-gray-800"
-              onClick={closeMenu}
-            >
-              Get in touch
-            </Link>
-          </div>
         </div>
       )}
     </header>
